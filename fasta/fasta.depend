@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1443158329 source:c:\users\administrador\oscarmariscal\fasta\main.cpp
+	<iostream>
+	"Fasta.h"
+
+1443158813 source:c:\users\administrador\oscarmariscal\fasta\src\fasta.cpp
+	"Fasta.h"
+
+1443158291 c:\users\administrador\oscarmariscal\fasta\include\fasta.h
+	<string>
+	<fstream>
+

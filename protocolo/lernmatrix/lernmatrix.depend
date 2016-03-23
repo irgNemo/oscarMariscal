@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1385320478 source:c:\users\administrador\documents\coj\lernmatrix\main.cpp
-	<iostream>
-
-1442954566 source:c:\users\administrador\documents\coj\lernmatrix\src\lernmatrix.cpp
-	"Lernmatrix.h"
-
-1442954654 c:\users\administrador\documents\coj\lernmatrix\include\lernmatrix.h
-

@@ -1,15 +1,23 @@
 #include "MemoriasAsociativas.h"
+#include <iostream>
 
-MemoriasAsociativas::MemoriasAsociativas()
+MemoriasAsociativas::MemoriasAsociativas(FormatoDeDatos d)
 {
-    //ctor
+    datos = d;
+    matriz = new int*[datos.getNumFil()];
+    for(int i = 0; i < datos.getNumFil(); ++i){
+        matriz[i] = new int[datos.getNumCol()];
+    }
+
+    filMatriz = datos.getNumFil();
+    colMatriz = datos.getNumCol();
 }
 
 MemoriasAsociativas::~MemoriasAsociativas(){
-//    for(int i = 0; i < sizeY; ++i) {
-//        delete [] ary[i];
-//    }
-//    delete [] ary;
+    for(int i = 0; i < datos.getNumFil(); ++i) {
+        delete [] matriz[i];
+    }
+    delete [] matriz;
 }
 int ** MemoriasAsociativas:: getMatriz(){
     return matriz;
@@ -20,9 +28,9 @@ void MemoriasAsociativas:: setMatriz(int ** m){
 }
 
 int ** MemoriasAsociativas:: getVectorSalida(){
-    return vectorSalida;
+    return vectoresSalida;
 }
 
 void MemoriasAsociativas::setVectorSalida(int ** v){
-    vectorSalida=v;
+    vectoresSalida=v;
 }

@@ -7,7 +7,7 @@
 class MemoriasAsociativasBinarias : public MemoriasAsociativas
 {
     public:
-        MemoriasAsociativasBinarias();
+        MemoriasAsociativasBinarias(FormatoDeDatos d);
 
     protected:
 

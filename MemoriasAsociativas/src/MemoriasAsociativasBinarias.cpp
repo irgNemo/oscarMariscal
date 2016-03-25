@@ -1,6 +1,5 @@
 #include "MemoriasAsociativasBinarias.h"
 
-MemoriasAsociativasBinarias::MemoriasAsociativasBinarias()
+MemoriasAsociativasBinarias::MemoriasAsociativasBinarias(FormatoDeDatos d):MemoriasAsociativas(d)
 {
-    //ctor
 }

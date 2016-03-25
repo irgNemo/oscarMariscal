@@ -2,16 +2,21 @@
 #define MEMORIASASOCIATIVAS_H
 
 #include <AlgoritmoAprendizaje.h>
+#include "FormatoDeDatos.h"
 
 
 class MemoriasAsociativas : public AlgoritmoAprendizaje
 {
-    //TODO crear contructor para eliminar las variablse de matriz y vectorSalida para,
     protected:
+        FormatoDeDatos datos;
         int ** matriz;
-        int ** vectorSalida;
+        int ** vectoresSalida;
+        int filMatriz;
+        int colMatriz;
     public:
-        MemoriasAsociativas();
+        FormatoDeDatos getFormatoDeDatos();
+        void setFormatoDeDatos(FormatoDeDatos f );
+        MemoriasAsociativas(FormatoDeDatos d);
         ~MemoriasAsociativas();
         int **getMatriz();
         void setMatriz(int ** m);

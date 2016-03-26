@@ -16,7 +16,6 @@
     <data key="d0"/>
     <node id="n0" yfiles.foldertype="group">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
@@ -24,7 +23,7 @@
               <y:Geometry height="486.1030020605785" width="445.01686507936506" x="-51.916936790923614" y="-46.39955797629979"/>
               <y:Fill color="#F5F5F5" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
-              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="445.01686507936506" x="0.0" y="0.0">Aprensizaje</y:NodeLabel>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="445.01686507936506" x="0.0" y="0.0">Aprendizaje</y:NodeLabel>
               <y:Shape type="roundrectangle"/>
               <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
@@ -180,15 +179,14 @@
     </node>
     <node id="n1" yfiles.foldertype="group">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
             <y:GroupNode>
-              <y:Geometry height="358.37646484375" width="446.50000000000006" x="-605.4870340356563" y="17.46371063211444"/>
+              <y:Geometry height="371.61844957657433" width="475.50000000000006" x="-605.4870340356563" y="17.46371063211444"/>
               <y:Fill color="#F5F5F5" transparent="false"/>
               <y:BorderStyle color="#000000" type="dashed" width="1.0"/>
-              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="446.50000000000006" x="0.0" y="0.0">Entrada</y:NodeLabel>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#EBEBEB" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="plain" hasLineColor="false" height="22.37646484375" modelName="internal" modelPosition="t" textColor="#000000" visible="true" width="475.50000000000006" x="0.0" y="0.0">Entrada</y:NodeLabel>
               <y:Shape type="roundrectangle"/>
               <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
               <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
@@ -244,7 +242,7 @@
                 </y:ModelParameter>
               </y:NodeLabel>
               <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel/>
+                <y:AttributeLabel>- direccion, string;</y:AttributeLabel>
                 <y:MethodLabel/>
               </y:UML>
             </y:UMLClassNode>
@@ -254,10 +252,10 @@
           <data key="d4"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="28.0" width="100.0" x="-273.9870340356562" y="153.09017547586444"/>
+              <y:Geometry height="80.0" width="129.0" x="-273.9870340356562" y="153.09017547586444"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" modelName="custom" textColor="#000000" visible="true" width="98.6181640625" x="0.69091796875" y="3.0">InputDBReader<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" modelName="custom" textColor="#000000" visible="true" width="98.6181640625" x="15.19091796875" y="3.0">InputDBReader<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -265,7 +263,8 @@
                 </y:ModelParameter>
               </y:NodeLabel>
               <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel/>
+                <y:AttributeLabel>- usuario, string;
+- contraseña, string;</y:AttributeLabel>
                 <y:MethodLabel/>
               </y:UML>
             </y:UMLClassNode>
@@ -275,7 +274,7 @@
           <data key="d4"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="119.0" width="181.0" x="-590.4870340356563" y="241.84017547586444"/>
+              <y:Geometry height="132.24198473282433" width="181.0" x="-590.4870340356563" y="241.84017547586444"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" modelName="custom" textColor="#000000" visible="true" width="94.32080078125" x="43.339599609375" y="3.0">CvsFileReader<y:LabelModel>
@@ -289,7 +288,7 @@
                 <y:AttributeLabel>- header: string
 - nombreAtributos: string[]
 - nombreClases: string[]
--vector&lt; vector&lt;&gt; &gt; atributos</y:AttributeLabel>
+-FormatoDeDatos, datos;</y:AttributeLabel>
                 <y:MethodLabel>CvsFile()</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
@@ -320,7 +319,6 @@
     </node>
     <node id="n2" yfiles.foldertype="group">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
@@ -379,7 +377,6 @@ setNombreAtributos()</y:MethodLabel>
     </node>
     <node id="n3" yfiles.foldertype="group">
       <data key="d4"/>
-      <data key="d5"/>
       <data key="d6">
         <y:ProxyAutoBoundsNode>
           <y:Realizers active="0">
@@ -432,7 +429,7 @@ setNombreAtributos()</y:MethodLabel>
           <data key="d4"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="59.0" width="181.0" x="605.6700255331741" y="-28.023093132549775"/>
+              <y:Geometry height="100.06088836186666" width="181.0" x="605.6700255331741" y="-38.857444277587945"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" modelName="custom" textColor="#000000" visible="true" width="106.54638671875" x="37.226806640625" y="3.0">OutputFileWriter<y:LabelModel>
@@ -443,7 +440,10 @@ setNombreAtributos()</y:MethodLabel>
                 </y:ModelParameter>
               </y:NodeLabel>
               <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel>+datos ; FormatoDeDatos </y:AttributeLabel>
+                <y:AttributeLabel>+datos ; FormatoDeDatos 
++dirección, string;
++nombre, string;
+</y:AttributeLabel>
                 <y:MethodLabel/>
               </y:UML>
             </y:UMLClassNode>
@@ -453,7 +453,7 @@ setNombreAtributos()</y:MethodLabel>
           <data key="d4"/>
           <data key="d6">
             <y:UMLClassNode>
-              <y:Geometry height="28.0" width="129.0" x="806.6700255331741" y="-19.523093132549775"/>
+              <y:Geometry height="73.72653721682849" width="129.0" x="806.6700255331741" y="-12.523093132549775"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" modelName="custom" textColor="#000000" visible="true" width="102.92822265625" x="13.035888671875" y="3.0">OutputDBWriter<y:LabelModel>
@@ -464,7 +464,8 @@ setNombreAtributos()</y:MethodLabel>
                 </y:ModelParameter>
               </y:NodeLabel>
               <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel/>
+                <y:AttributeLabel>- usuario, string;
+- contraseña, string;</y:AttributeLabel>
                 <y:MethodLabel/>
               </y:UML>
             </y:UMLClassNode>
@@ -486,7 +487,7 @@ setNombreAtributos()</y:MethodLabel>
               </y:NodeLabel>
               <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
                 <y:AttributeLabel/>
-                <y:MethodLabel>CvsFile(string direccion)</y:MethodLabel>
+                <y:MethodLabel>CvsFile()</y:MethodLabel>
               </y:UML>
             </y:UMLClassNode>
           </data>
@@ -592,7 +593,7 @@ setNombreAtributos()</y:MethodLabel>
     <edge id="n1::e1" source="n1::n3" target="n1::n1">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-59.5" tx="-45.25" ty="29.499999999999996">
+          <y:Path sx="0.0" sy="-66.12099236641218" tx="-45.25" ty="29.499999999999996">
             <y:Point x="-499.9870340356562" y="226.84017547586444"/>
             <y:Point x="-439.7370340356562" y="226.84017547586444"/>
           </y:Path>
@@ -618,7 +619,7 @@ setNombreAtributos()</y:MethodLabel>
     <edge id="n1::e3" source="n1::n2" target="n1::n0">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-14.0" tx="31.125" ty="29.0">
+          <y:Path sx="0.0" sy="-39.999999999999986" tx="31.125" ty="29.0">
             <y:Point x="-223.98703403565622" y="148.34017547586444"/>
             <y:Point x="-278.1120340356562" y="148.34017547586444"/>
           </y:Path>

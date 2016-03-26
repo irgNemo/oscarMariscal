@@ -14,6 +14,7 @@ class FormatoDeDatos
         int numFil;
         int numCol;
     public:
+        //TODO Renombrar para que sea mas claro que se riefieren a el conjuntoFundamental
         int getNumCol();
         int getNumFil();
         void setNumCol(int c);

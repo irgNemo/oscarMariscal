@@ -1,6 +1,13 @@
 #include "MemoriasAsociativas.h"
 #include <iostream>
 
+/** \brief La matriz se pone en 0
+ *
+ * \param Recibe un FormatoDeDatos para el conjunto fundamental
+ * \return
+ *
+ */
+
 MemoriasAsociativas::MemoriasAsociativas(FormatoDeDatos d)
 {
     datos = d;
@@ -34,3 +41,14 @@ int ** MemoriasAsociativas:: getVectorSalida(){
 void MemoriasAsociativas::setVectorSalida(int ** v){
     vectoresSalida=v;
 }
+
+FormatoDeDatos MemoriasAsociativas::getFormatoDeDatos()
+{
+    return datos;
+}
+
+void MemoriasAsociativas::setFormatoDeDatos(FormatoDeDatos f)
+{
+    datos = f;
+}
+

@@ -41,9 +41,13 @@ int * LearnMatrix:: metodoRecuperacion(int* patron, int n){
                 sumaDeLosPatrones[i]+=1;
         }
     }
+    //Buscando el elemento mayor para devolver el patron correcto;
+    int mayor =0;
     for (int i = 0 ; i < filMatriz; i++){
-        std::cout << sumaDeLosPatrones[i]<< ":" ;
+        if (sumaDeLosPatrones[i]>sumaDeLosPatrones[mayor])
+            mayor=i;
     }
+    return vectoresSalida[mayor];
 }
 
 LearnMatrix:: ~ LearnMatrix(){

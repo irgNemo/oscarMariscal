@@ -1,11 +1,6 @@
 #include "InputFileReader.h"
 
-InputFileReader::InputFileReader()
+InputFileReader::InputFileReader(string direccion)
 {
-    //ctor
-}
-
-InputFileReader::~InputFileReader()
-{
-    //dtor
+    this->direccion= direccion;
 }

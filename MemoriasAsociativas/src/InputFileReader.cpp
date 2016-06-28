@@ -1,6 +1,6 @@
 #include "InputFileReader.h"
 
-InputFileReader::InputFileReader(string direccion)
+InputFileReader::InputFileReader(string filePath)
 {
-    this->direccion= direccion;
+    this->filePath= filePath;
 }

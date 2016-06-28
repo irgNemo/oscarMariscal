@@ -1,33 +1,33 @@
 #include "FormatoDeDatos.h"
 
-FormatoDeDatos::FormatoDeDatos()
+DataFormat::DataFormat()
 {
     //ctor
 }
-int FormatoDeDatos::getNumCol(){
+int DataFormat::getNumCol(){
     return numCol;
 }
 
-int FormatoDeDatos::getNumFil(){
+int DataFormat::getNumFil(){
     return numFil;
 }
 
-void FormatoDeDatos::setNumCol(int c){
+void DataFormat::setNumCol(int c){
     numCol = c;
 }
 
-void FormatoDeDatos::setNumFil(int f){
+void DataFormat::setNumFil(int f){
     numFil=f;
 }
 
-FormatoDeDatos::~FormatoDeDatos()
+DataFormat::~DataFormat()
 {
     //dtor
 }
-int** FormatoDeDatos::getConjuntoFundamental(){
-    return conjuntoFundamental;
+int** DataFormat::getFundamentalSet(){
+    return fundamentalSet;
 }
 
-void FormatoDeDatos::setConjuntoFundamental(int** c){
-    conjuntoFundamental = c;
+void DataFormat::setFundamentalSet(int** c){
+    fundamentalSet = c;
 }

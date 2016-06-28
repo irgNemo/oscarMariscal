@@ -4,12 +4,12 @@
 
 
 using std::string;
-class FormatoDeDatos
+class DataFormat
 {
-    string cabecera;
-    string nombreDeAtributos[];
-    string nombreDeClases[];
-    int ** conjuntoFundamental;
+    string header;
+    string atributeNames[];
+    string classesNames[];
+    int ** fundamentalSet;
 
         int numFil;
         int numCol;
@@ -19,10 +19,10 @@ class FormatoDeDatos
         int getNumFil();
         void setNumCol(int c);
         void setNumFil(int f);
-        FormatoDeDatos();
-        virtual ~FormatoDeDatos();
-        int ** getConjuntoFundamental();
-        void setConjuntoFundamental(int ** c);
+        DataFormat();
+        virtual ~DataFormat();
+        int ** getFundamentalSet();
+        void setFundamentalSet(int ** c);
 
 };
 

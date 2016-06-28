@@ -2,12 +2,12 @@
 #define ALGORITMOAPRENDIZAJE_H
 
 
-class AlgoritmoAprendizaje
+class LearningAlgorithm
 {
     public:
-        AlgoritmoAprendizaje();
-        virtual void metodoAprendizaje()=0;
-        virtual int * metodoRecuperacion(int * patron,int n)=0;
+        LearningAlgorithm();
+        virtual void learningMethod()=0;
+        virtual int * retrievalMethod (int * pattern,int n)=0;
 //        virtual ~AlgoritmoAprendizaje()=0;
 };
 

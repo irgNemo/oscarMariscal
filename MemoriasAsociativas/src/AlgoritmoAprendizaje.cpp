@@ -1,5 +1,5 @@
 #include "AlgoritmoAprendizaje.h"
 
-AlgoritmoAprendizaje::AlgoritmoAprendizaje(){
+LearningAlgorithm::LearningAlgorithm(){
 
 }

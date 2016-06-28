@@ -4,10 +4,10 @@
 #include <MemoriasAsociativas.h>
 
 
-class MemoriasAsociativasBinarias : public MemoriasAsociativas
-{
-    public:
-        MemoriasAsociativasBinarias(FormatoDeDatos d);
+class BinaryAssociativeMemories : public AssociativeMemories {
+public:
+    BinaryAssociativeMemories(DataFormat d):AssociativeMemories(d) {
+    }
 };
 
 #endif // MEMORIASASOCIATIVASBINARIAS_H

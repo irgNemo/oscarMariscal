@@ -1,31 +1,30 @@
 # depslib dependency file v1.0
-1458688269 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\algoritmoaprendizaje.cpp
+1466653308 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\algoritmoaprendizaje.cpp
 	"AlgoritmoAprendizaje.h"
 
-1458865190 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\algoritmoaprendizaje.h
+1466653315 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\algoritmoaprendizaje.h
 
-1458958971 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\memoriasasociativas.cpp
-	"MemoriasAsociativas.h"
-	<iostream>
+1462396608 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\memoriasasociativas.cpp
 
-1458862914 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\memoriasasociativas.h
+1467087915 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\memoriasasociativas.h
 	<AlgoritmoAprendizaje.h>
 	"FormatoDeDatos.h"
 
-1458792907 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\memoriasasociativasbinarias.cpp
+1462396691 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\memoriasasociativasbinarias.cpp
 	"MemoriasAsociativasBinarias.h"
 
-1458877394 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\memoriasasociativasbinarias.h
+1467087933 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\memoriasasociativasbinarias.h
 	<MemoriasAsociativas.h>
 
-1458876121 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\learnmatrix.cpp
+1462396869 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\learnmatrix.cpp
 	"LearnMatrix.h"
 	<iostream>
 
-1458865196 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\learnmatrix.h
+1467088253 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\learnmatrix.h
 	<MemoriasAsociativasBinarias.h>
+	<iostream>
 
-1458959981 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\main.cpp
+1466740714 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\main.cpp
 	<iostream>
 	"AlgoritmoAprendizaje.h"
 	"MemoriasAsociativas.h"
@@ -36,26 +35,26 @@
 	"InputReader.h"
 	"CvsFileReader.h"
 
-1458791971 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\formatodedatos.cpp
+1467088316 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\formatodedatos.cpp
 	"FormatoDeDatos.h"
 
-1458958615 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\formatodedatos.h
+1467088299 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\formatodedatos.h
 	<string>
 
-1458889116 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\inputfilereader.cpp
+1467088472 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\inputfilereader.cpp
 	"InputFileReader.h"
 
-1458889458 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\inputfilereader.h
+1467088472 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\inputfilereader.h
 	<InputReader.h>
 	<string>
 	<fstream>
 
-1458770019 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\inputreader.h
+1461813009 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\inputreader.h
 
-1458767774 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\inputreader.cpp
+1461813009 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\inputreader.cpp
 	"InputReader.h"
 
-1458959765 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\cvsfilereader.h
+1467088519 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\cvsfilereader.h
 	"FormatoDeDatos.h"
 	<InputFileReader.h>
 	<string>
@@ -64,6 +63,6 @@
 	<sstream>
 	<vector>
 
-1458959740 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\cvsfilereader.cpp
+1467088305 source:c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\src\cvsfilereader.cpp
 	"CvsFileReader.h"
 

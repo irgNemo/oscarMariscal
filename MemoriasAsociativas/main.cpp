@@ -18,7 +18,7 @@ int main()
     cout << "Imprimiendo los vectores de salida" << endl;
     lern.oneHot();
     lern.imprimirVectorSalida();
-    lern.metodoAprendizaje();
+    lern.learningMethod();
     cout << "Imprimiendo el conjunto fundamental" << endl;
     lern.imprimirConjuntoFunamental();
     cout << "Imprimiendo la matriz despues de aprender" << endl;
@@ -32,9 +32,9 @@ int main()
     patronEjemplo[3]=1;
     patronEjemplo[4]=1;
     int *patronDeSalida;
-    patronDeSalida =lern.metodoRecuperacion(patronEjemplo,5);
+    patronDeSalida =lern.retrievalMethod(patronEjemplo,5);
     for (int i =0 ; i <lern.getFormatoDeDatos().getNumFil() ; i++) //Cookies <3
         cout << patronDeSalida[i] << ":";
-    lern.metodoAprendizaje();
+    lern.learningMethod();
     return 0;
 }

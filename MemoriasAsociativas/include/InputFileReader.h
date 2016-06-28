@@ -10,10 +10,10 @@ using std::string;
 class InputFileReader : public InputReader
 {
     protected:
-    std::string direccion;
-    std::ifstream archivo;
+    std::string filePath;
+    std::ifstream archive;
     public:
-        InputFileReader(string direccion);
+        InputFileReader(string filePath);
 };
 
 #endif // INPUTFILEREADER_H

@@ -48,9 +48,6 @@
 		<Unit filename="src/FormatoDeDatos.cpp" />
 		<Unit filename="src/InputFileReader.cpp" />
 		<Unit filename="src/InputReader.cpp" />
-		<Unit filename="src/LearnMatrix.cpp" />
-		<Unit filename="src/MemoriasAsociativas.cpp" />
-		<Unit filename="src/MemoriasAsociativasBinarias.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -47,12 +47,12 @@ CvsFileReader::~CvsFileReader() {
     //dtor
 }
 
-DataFormat CvsFileReader::getFormatoDeDatos(){
+DataFormat CvsFileReader::getDataFormat(){
     return data;
 
 }
 
-void CvsFileReader::setFormatoDeDatos(DataFormat data){
+void CvsFileReader::setDataFormat(DataFormat data){
     this->data = data;
 }
 

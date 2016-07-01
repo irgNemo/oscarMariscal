@@ -1,7 +1,7 @@
 #ifndef CVSFILEREADER_H
 #define CVSFILEREADER_H
 
-#include "FormatoDeDatos.h"
+#include "DataFormat.h"
 #include <InputFileReader.h>
 #include <string>
 #include <iostream>
@@ -20,8 +20,8 @@ class CvsFileReader : public InputFileReader
         CvsFileReader(string direccion);
         virtual ~CvsFileReader();
         void read();
-        DataFormat getFormatoDeDatos();
-        void setFormatoDeDatos(DataFormat datos);
+        DataFormat getDataFormat();
+        void setDataFormat(DataFormat datos);
 
 };
 

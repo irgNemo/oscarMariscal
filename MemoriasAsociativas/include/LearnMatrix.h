@@ -2,7 +2,7 @@
 #define LEARNMATRIX_H
 #define EPSILON 1
 
-#include <MemoriasAsociativasBinarias.h>
+#include <BinaryAssociativeMemories.h>
 #include <iostream>
 
 
@@ -100,7 +100,7 @@ public:
  *
  */
 
-    void imprimirMatriz() {
+    void printMatrix() {
         for (int i = 0; i < data.getNumFil() ; i++) {
             for (int j = 0 ; j < data.getNumCol() ; j++) {
                 std::cout << matrix[i][j] << ":" ;
@@ -115,7 +115,7 @@ public:
      *
      */
 
-    void imprimirVectorSalida() {
+    void printOutputVectors() {
         for (int i = 0; i < data.getNumFil() ; i++) {
             for (int j = 0 ; j < data.getNumFil() ; j++) {
                 std::cout << outputVector[i][j] << ":" ;
@@ -124,11 +124,11 @@ public:
         }
     }
 
-    /** \brief Prints the fundamental patterns to console
+    /** \brief Prints the fundamental set to console
      *
      */
 
-    void imprimirConjuntoFunamental() {
+    void printFundamentalSet() {
         int ** conjuntoFundamental;
         conjuntoFundamental = data.getFundamentalSet();
 

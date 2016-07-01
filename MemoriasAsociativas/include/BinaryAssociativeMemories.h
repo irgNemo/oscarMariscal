@@ -1,7 +1,7 @@
 #ifndef MEMORIASASOCIATIVASBINARIAS_H
 #define MEMORIASASOCIATIVASBINARIAS_H
 
-#include <MemoriasAsociativas.h>
+#include <AssociativeMemories.h>
 
 
 class BinaryAssociativeMemories : public AssociativeMemories {

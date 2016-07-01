@@ -1,4 +1,4 @@
-#include "FormatoDeDatos.h"
+#include "DataFormat.h"
 
 DataFormat::DataFormat()
 {

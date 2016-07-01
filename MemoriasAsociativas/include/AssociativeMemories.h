@@ -1,8 +1,8 @@
 #ifndef MEMORIASASOCIATIVAS_H
 #define MEMORIASASOCIATIVAS_H
 
-#include <AlgoritmoAprendizaje.h>
-#include "FormatoDeDatos.h"
+#include <LearningAlgorithm.h>
+#include "DataFormat.h"
 
 
 class AssociativeMemories : public LearningAlgorithm {

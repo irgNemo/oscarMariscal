@@ -1,9 +1,9 @@
 #include <iostream>
-#include "AlgoritmoAprendizaje.h"
-#include "MemoriasAsociativas.h"
-#include "MemoriasAsociativasBinarias.h"
+#include "LearningAlgorithm.h"
+#include "AssociativeMemories.h"
+#include "BinaryAssociativeMemories.h"
 #include "LearnMatrix.h"
-#include "FormatoDeDatos.h"
+#include "DataFormat.h"
 #include "InputFileReader.h"
 #include "InputReader.h"
 #include "CvsFileReader.h"
@@ -12,19 +12,19 @@ using namespace std;
 int main()
 {
     CvsFileReader lector("conjuntoFundamentalEjemploUno.txt");
-    LearnMatrix lern(lector.getFormatoDeDatos());
-    cout << "Imprimiendo la matriz antes de aprender" << endl;
-    lern.imprimirMatriz();
-    cout << "Imprimiendo los vectores de salida" << endl;
+    LearnMatrix lern(lector.getDataFormat());
+    cout << "Printing the matrix before learning" << endl;
+    lern.printMatrix();
+    cout << "Printing the output vectors" << endl;
     lern.oneHot();
-    lern.imprimirVectorSalida();
+    lern.printOutputVectors();
     lern.learningMethod();
-    cout << "Imprimiendo el conjunto fundamental" << endl;
-    lern.imprimirConjuntoFunamental();
-    cout << "Imprimiendo la matriz despues de aprender" << endl;
-    lern.imprimirMatriz();
+    cout << "Printing the fundamental set" << endl;
+    lern.printFundamentalSet();
+    cout << "Printing the matrix after learning" << endl;
+    lern.printMatrix();
     cout << endl << endl;
-    cout << "Dandole un patron a reconocer" << endl;
+    cout << "Giving a patter to recognize" << endl;
     int patronEjemplo[5];
     patronEjemplo[0]=1;
     patronEjemplo[1]=0;

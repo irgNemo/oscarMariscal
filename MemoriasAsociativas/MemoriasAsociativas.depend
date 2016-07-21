@@ -84,3 +84,62 @@
 1467348649 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\binaryassociativememories.h
 	<AssociativeMemories.h>
 
+1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\dataformat.cpp
+	"DataFormat.h"
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\dataformat.h
+	<string>
+
+1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\inputfilereader.cpp
+	"InputFileReader.h"
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\inputfilereader.h
+	<InputReader.h>
+	<string>
+	<fstream>
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\inputreader.h
+
+1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\inputreader.cpp
+	"InputReader.h"
+
+1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\learningalgorithm.cpp
+	"LearningAlgorithm.h"
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\learningalgorithm.h
+
+1469118673 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\cvsfilereader.cpp
+	"CvsFileReader.h"
+
+1469115704 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\cvsfilereader.h
+	"DataFormat.h"
+	<InputFileReader.h>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1469118531 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\main.cpp
+	<iostream>
+	"LearningAlgorithm.h"
+	"AssociativeMemories.h"
+	"BinaryAssociativeMemories.h"
+	"LearnMatrix.h"
+	"DataFormat.h"
+	"InputFileReader.h"
+	"InputReader.h"
+	"CvsFileReader.h"
+	<vector>
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\associativememories.h
+	<LearningAlgorithm.h>
+	"DataFormat.h"
+
+1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\binaryassociativememories.h
+	<AssociativeMemories.h>
+
+1469116351 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\learnmatrix.h
+	<BinaryAssociativeMemories.h>
+	<iostream>
+

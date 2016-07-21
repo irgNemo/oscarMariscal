@@ -12,7 +12,25 @@ inline int toInt(std::string s) {
 
 //TODO mover lo necesario al metodo de read. o quitar el metodo read para que todo se haga en el contructor
 CvsFileReader::CvsFileReader(string direccion):InputFileReader(direccion) {
-    ifstream file( direccion.c_str() );
+    path = direccion;
+}
+
+CvsFileReader::~CvsFileReader() {
+    //dtor
+}
+
+DataFormat CvsFileReader::getDataFormat(){
+    return data;
+
+}
+
+void CvsFileReader::setDataFormat(DataFormat data){
+    this->data = data;
+}
+
+
+void CvsFileReader::read() {
+    ifstream file( path.c_str() );
     vector<vector<std::string> >   matrix;
     vector<string>   row;
     string line;
@@ -38,25 +56,12 @@ CvsFileReader::CvsFileReader(string direccion):InputFileReader(direccion) {
             matriz[i][j]=toInt(matrix[i][j]);
     }
     data.setFundamentalSet(matriz);
-    std::cout << matrix.size();
     data.setNumFil(matrix.size());
     data.setNumCol(matrix[0].size());
 }
 
-CvsFileReader::~CvsFileReader() {
-    //dtor
-}
-
-DataFormat CvsFileReader::getDataFormat(){
-    return data;
-
-}
-
-void CvsFileReader::setDataFormat(DataFormat data){
-    this->data = data;
-}
-
-
-void CvsFileReader::read() {
-    //dtor
+void CvsFileReader::read(string direccion)
+{
+    path = direccion;
+    read();
 }

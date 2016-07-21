@@ -15,7 +15,6 @@ public:
      *
      */
     LearnMatrix(DataFormat d):BinaryAssociativeMemories(d) {
-
         for (int i =0 ; i < data.getNumFil(); i++) {
             for (int j = 0 ; j < data.getNumCol(); j++) {
                 matrix[i][j]=0;
@@ -23,10 +22,11 @@ public:
         }
     }
 
+
+
     /** \brief the learning method updates the "M" matrix, depending on the input patterns
      *
      */
-
     void  learningMethod() {
         for (int i = 0 ; i< cantMatrixRows; i++) {
             for (int j = 0 ; j < cantColMatriz; j++) {
@@ -47,7 +47,6 @@ public:
      * \return
      *
      */
-
     int *  retrievalMethod(int* pattern, int n) {
         //se crea un vector para determinar el mas grande, para saber que patron de salida devolver.
         int sumaDeLosPatrones[cantMatrixRows];
@@ -99,7 +98,6 @@ public:
 /** \brief method for testing purposes, prints the "M" matrix
  *
  */
-
     void printMatrix() {
         for (int i = 0; i < data.getNumFil() ; i++) {
             for (int j = 0 ; j < data.getNumCol() ; j++) {
@@ -114,7 +112,6 @@ public:
      *
      *
      */
-
     void printOutputVectors() {
         for (int i = 0; i < data.getNumFil() ; i++) {
             for (int j = 0 ; j < data.getNumFil() ; j++) {
@@ -127,7 +124,6 @@ public:
     /** \brief Prints the fundamental set to console
      *
      */
-
     void printFundamentalSet() {
         int ** conjuntoFundamental;
         conjuntoFundamental = data.getFundamentalSet();

@@ -15,11 +15,13 @@ using std::string;
 
 class CvsFileReader : public InputFileReader
 {
+    string path;
     DataFormat data;
     public:
         CvsFileReader(string direccion);
         virtual ~CvsFileReader();
         void read();
+        void read(string direccion);
         DataFormat getDataFormat();
         void setDataFormat(DataFormat datos);
 

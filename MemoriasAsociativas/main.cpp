@@ -7,11 +7,14 @@
 #include "InputFileReader.h"
 #include "InputReader.h"
 #include "CvsFileReader.h"
+
+#include <vector>
 using namespace std;
 
 int main()
 {
     CvsFileReader lector("conjuntoFundamentalEjemploUno.txt");
+    lector.read();
     LearnMatrix lern(lector.getDataFormat());
     cout << "Printing the matrix before learning" << endl;
     lern.printMatrix();
@@ -24,17 +27,23 @@ int main()
     cout << "Printing the matrix after learning" << endl;
     lern.printMatrix();
     cout << endl << endl;
-    cout << "Giving a patter to recognize" << endl;
-    int patronEjemplo[5];
-    patronEjemplo[0]=1;
-    patronEjemplo[1]=0;
-    patronEjemplo[2]=0;
-    patronEjemplo[3]=1;
-    patronEjemplo[4]=1;
+    cout << "Giving a pattern to recognize" << endl;
     int *patronDeSalida;
-    patronDeSalida =lern.retrievalMethod(patronEjemplo,5);
-    for (int i =0 ; i <lern.getFormatoDeDatos().getNumFil() ; i++) //Cookies <3
-        cout << patronDeSalida[i] << ":";
-    lern.learningMethod();
+    CvsFileReader patternsToRecognize("patternsToRecognize.txt");
+    patternsToRecognize.read();
+    int ** patterns = patternsToRecognize.getDataFormat().getFundamentalSet();
+    int colNumber = patternsToRecognize.getDataFormat().getNumCol();
+    int rowNumber = patternsToRecognize.getDataFormat().getNumFil();
+
+    for (int i = 0 ; i < rowNumber; i++){
+        patronDeSalida =lern.retrievalMethod(patterns[i],5);
+        for (int j =0 ; j <colNumber; j++)
+            cout << patterns[i][j] << ":";
+        cout << "->";
+        for (int j =0 ; j <lern.getFormatoDeDatos().getNumFil(); j++)
+            cout << patronDeSalida[j] << ":";
+        cout << "\n";
+    }
+
     return 0;
 }

@@ -1,4 +1,5 @@
 #include "DataFormat.h"
+#include "Util.h"
 
 DataFormat::DataFormat()
 {
@@ -30,4 +31,14 @@ int** DataFormat::getFundamentalSet(){
 
 void DataFormat::setFundamentalSet(int** c){
     fundamentalSet = c;
+}
+
+void DataFormat::createRandomFundamentalSet(int rows, int columns){
+    setNumCol(columns);
+    setNumFil(rows);
+    Util utilHelper;
+    int** ary = new int*[rows];
+    for(int i = 0; i < rows; ++i)
+        ary[i] =utilHelper.getRandomBinaryArray(columns);
+    fundamentalSet=ary;
 }

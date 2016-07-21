@@ -23,6 +23,7 @@ class DataFormat
         virtual ~DataFormat();
         int ** getFundamentalSet();
         void setFundamentalSet(int ** c);
+        void createRandomFundamentalSet(int rows, int columns);
 
 };
 

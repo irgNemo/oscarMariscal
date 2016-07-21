@@ -7,15 +7,20 @@
 #include "InputFileReader.h"
 #include "InputReader.h"
 #include "CvsFileReader.h"
+#include "Util.h"
 
 #include <vector>
 using namespace std;
 
 int main()
 {
-    CvsFileReader lector("conjuntoFundamentalEjemploUno.txt");
-    lector.read();
-    LearnMatrix lern(lector.getDataFormat());
+//    CvsFileReader lector("conjuntoFundamentalEjemploUno.txt");
+//    lector.read();
+    DataFormat randomData;
+    randomData.createRandomFundamentalSet(3,4);
+//    lector.setDataFormat(randomData);
+
+    LearnMatrix lern(randomData);
     cout << "Printing the matrix before learning" << endl;
     lern.printMatrix();
     cout << "Printing the output vectors" << endl;

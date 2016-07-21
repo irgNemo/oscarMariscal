@@ -84,10 +84,11 @@
 1467348649 c:\users\oscar\documents\github\oscarmariscal\memoriasasociativas\include\binaryassociativememories.h
 	<AssociativeMemories.h>
 
-1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\dataformat.cpp
+1469144718 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\dataformat.cpp
 	"DataFormat.h"
+	"Util.h"
 
-1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\dataformat.h
+1469144500 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\dataformat.h
 	<string>
 
 1469029543 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\inputfilereader.cpp
@@ -120,7 +121,7 @@
 	<sstream>
 	<vector>
 
-1469118531 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\main.cpp
+1469144550 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\main.cpp
 	<iostream>
 	"LearningAlgorithm.h"
 	"AssociativeMemories.h"
@@ -130,6 +131,7 @@
 	"InputFileReader.h"
 	"InputReader.h"
 	"CvsFileReader.h"
+	"Util.h"
 	<vector>
 
 1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\associativememories.h
@@ -139,7 +141,14 @@
 1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\binaryassociativememories.h
 	<AssociativeMemories.h>
 
-1469116351 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\learnmatrix.h
+1469119965 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\learnmatrix.h
 	<BinaryAssociativeMemories.h>
 	<iostream>
+
+1469145562 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\util.cpp
+	"Util.h"
+	<cstdlib>
+	<ctime>
+
+1469145563 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\util.h
 

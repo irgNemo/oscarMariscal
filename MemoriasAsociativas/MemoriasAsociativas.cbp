@@ -34,20 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/AlgoritmoAprendizaje.h" />
+		<Unit filename="include/AssociativeMemories.h" />
+		<Unit filename="include/BinaryAssociativeMemories.h" />
 		<Unit filename="include/CvsFileReader.h" />
-		<Unit filename="include/FormatoDeDatos.h" />
+		<Unit filename="include/DataFormat.h" />
 		<Unit filename="include/InputFileReader.h" />
 		<Unit filename="include/InputReader.h" />
 		<Unit filename="include/LearnMatrix.h" />
-		<Unit filename="include/MemoriasAsociativas.h" />
-		<Unit filename="include/MemoriasAsociativasBinarias.h" />
+		<Unit filename="include/LearningAlgorithm.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/AlgoritmoAprendizaje.cpp" />
 		<Unit filename="src/CvsFileReader.cpp" />
-		<Unit filename="src/FormatoDeDatos.cpp" />
+		<Unit filename="src/DataFormat.cpp" />
 		<Unit filename="src/InputFileReader.cpp" />
 		<Unit filename="src/InputReader.cpp" />
+		<Unit filename="src/LearningAlgorithm.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

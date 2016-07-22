@@ -7,11 +7,8 @@
 class CsvFileWriter : public OutputFileWriter
 {
     public:
-        CsvFileWriter();
-
-    protected:
-
-    private:
+    CsvFileWriter();
+    void write();
 };
 
 #endif // CSVFILEWRITER_H

@@ -36,19 +36,25 @@
 		</Compiler>
 		<Unit filename="include/AssociativeMemories.h" />
 		<Unit filename="include/BinaryAssociativeMemories.h" />
-		<Unit filename="include/CvsFileReader.h" />
+		<Unit filename="include/CsvFileReader.h" />
+		<Unit filename="include/CsvFileWriter.h" />
 		<Unit filename="include/DataFormat.h" />
 		<Unit filename="include/InputFileReader.h" />
 		<Unit filename="include/InputReader.h" />
 		<Unit filename="include/LearnMatrix.h" />
 		<Unit filename="include/LearningAlgorithm.h" />
+		<Unit filename="include/OutputFileWriter.h" />
+		<Unit filename="include/OutputWriter.h" />
 		<Unit filename="include/Util.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/CvsFileReader.cpp" />
+		<Unit filename="src/CsvFileReader.cpp" />
+		<Unit filename="src/CsvFileWriter.cpp" />
 		<Unit filename="src/DataFormat.cpp" />
 		<Unit filename="src/InputFileReader.cpp" />
 		<Unit filename="src/InputReader.cpp" />
 		<Unit filename="src/LearningAlgorithm.cpp" />
+		<Unit filename="src/OutputFileWriter.cpp" />
+		<Unit filename="src/OutputWriter.cpp" />
 		<Unit filename="src/Util.cpp" />
 		<Extensions>
 			<code_completion />

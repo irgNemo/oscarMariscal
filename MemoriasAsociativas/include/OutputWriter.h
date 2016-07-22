@@ -5,11 +5,9 @@
 class OutputWriter
 {
     public:
-        OutputWriter();
+    OutputWriter();
+    virtual void write()=0;
 
-    protected:
-
-    private:
 };
 
 #endif // OUTPUTWRITER_H

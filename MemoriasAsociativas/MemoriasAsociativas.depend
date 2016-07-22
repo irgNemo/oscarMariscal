@@ -121,7 +121,7 @@
 	<sstream>
 	<vector>
 
-1469144550 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\main.cpp
+1469216902 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\main.cpp
 	<iostream>
 	"LearningAlgorithm.h"
 	"AssociativeMemories.h"
@@ -130,9 +130,9 @@
 	"DataFormat.h"
 	"InputFileReader.h"
 	"InputReader.h"
-	"CvsFileReader.h"
+	"CsvFileReader.h"
 	"Util.h"
-	<vector>
+	"CsvFileWriter.h"
 
 1469029543 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\associativememories.h
 	<LearningAlgorithm.h>
@@ -151,4 +151,36 @@
 	<ctime>
 
 1469145563 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\util.h
+
+1469207131 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\csvfilereader.cpp
+	"CsvFileReader.h"
+
+1469207096 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\csvfilereader.h
+	"DataFormat.h"
+	<InputFileReader.h>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1469206638 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\outputwriter.cpp
+	"OutputWriter.h"
+
+1469208283 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\outputwriter.h
+
+1469216565 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\csvfilewriter.cpp
+	"CsvFileWriter.h"
+	<fstream>
+	<iostream>
+
+1469208408 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\csvfilewriter.h
+	<OutputFileWriter.h>
+
+1469208289 c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\include\outputfilewriter.h
+	<OutputWriter.h>
+	"DataFormat.h"
+
+1469207942 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\outputfilewriter.cpp
+	"OutputFileWriter.h"
 

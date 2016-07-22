@@ -8,19 +8,22 @@
 #include "InputReader.h"
 #include "CsvFileReader.h"
 #include "Util.h"
+#include "CsvFileWriter.h"
 
-#include <vector>
 using namespace std;
 
 int main()
 {
 //    CsvFileReader lector("conjuntoFundamentalEjemploUno.txt");
 //    lector.read();
-    DataFormat randomData;
-    randomData.createRandomFundamentalSet(3,4);
-//    lector.setDataFormat(randomData);
+    CsvFileWriter writer;
+    DataFormat data;
+    data.createRandomFundamentalSet(3,6);
+    writer.setFileName("toTestTheWriter.txt");
+    writer.setDataFormat(data);
+    writer.write();
 
-    LearnMatrix lern(randomData);
+    LearnMatrix lern(data);
     cout << "Printing the matrix before learning" << endl;
     lern.printMatrix();
     cout << "Printing the output vectors" << endl;

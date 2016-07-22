@@ -6,7 +6,7 @@
 #include "DataFormat.h"
 #include "InputFileReader.h"
 #include "InputReader.h"
-#include "CvsFileReader.h"
+#include "CsvFileReader.h"
 #include "Util.h"
 
 #include <vector>
@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-//    CvsFileReader lector("conjuntoFundamentalEjemploUno.txt");
+//    CsvFileReader lector("conjuntoFundamentalEjemploUno.txt");
 //    lector.read();
     DataFormat randomData;
     randomData.createRandomFundamentalSet(3,4);
@@ -34,7 +34,7 @@ int main()
     cout << endl << endl;
     cout << "Giving a pattern to recognize" << endl;
     int *patronDeSalida;
-    CvsFileReader patternsToRecognize("patternsToRecognize.txt");
+    CsvFileReader patternsToRecognize("patternsToRecognize.txt");
     patternsToRecognize.read();
     int ** patterns = patternsToRecognize.getDataFormat().getFundamentalSet();
     int colNumber = patternsToRecognize.getDataFormat().getNumCol();

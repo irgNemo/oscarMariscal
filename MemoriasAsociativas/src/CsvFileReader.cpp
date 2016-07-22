@@ -1,4 +1,4 @@
-#include "CvsFileReader.h"
+#include "CsvFileReader.h"
 
 using namespace std;
 
@@ -11,25 +11,25 @@ inline int toInt(std::string s) {
 }
 
 //TODO mover lo necesario al metodo de read. o quitar el metodo read para que todo se haga en el contructor
-CvsFileReader::CvsFileReader(string direccion):InputFileReader(direccion) {
+CsvFileReader::CsvFileReader(string direccion):InputFileReader(direccion) {
     path = direccion;
 }
 
-CvsFileReader::~CvsFileReader() {
+CsvFileReader::~CsvFileReader() {
     //dtor
 }
 
-DataFormat CvsFileReader::getDataFormat(){
+DataFormat CsvFileReader::getDataFormat(){
     return data;
 
 }
 
-void CvsFileReader::setDataFormat(DataFormat data){
+void CsvFileReader::setDataFormat(DataFormat data){
     this->data = data;
 }
 
 
-void CvsFileReader::read() {
+void CsvFileReader::read() {
     ifstream file( path.c_str() );
     vector<vector<std::string> >   matrix;
     vector<string>   row;
@@ -60,7 +60,7 @@ void CvsFileReader::read() {
     data.setNumCol(matrix[0].size());
 }
 
-void CvsFileReader::read(string direccion)
+void CsvFileReader::read(string direccion)
 {
     path = direccion;
     read();

@@ -13,13 +13,13 @@ using std::string;
 
 //TODO el nombre de la clase esta mal, deberia ser csv no cvs
 
-class CvsFileReader : public InputFileReader
+class CsvFileReader : public InputFileReader
 {
     string path;
     DataFormat data;
     public:
-        CvsFileReader(string direccion);
-        virtual ~CvsFileReader();
+        CsvFileReader(string direccion);
+        virtual ~CsvFileReader();
         void read();
         void read(string direccion);
         DataFormat getDataFormat();

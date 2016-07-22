@@ -42,12 +42,14 @@
 		<Unit filename="include/InputReader.h" />
 		<Unit filename="include/LearnMatrix.h" />
 		<Unit filename="include/LearningAlgorithm.h" />
+		<Unit filename="include/Util.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/CvsFileReader.cpp" />
 		<Unit filename="src/DataFormat.cpp" />
 		<Unit filename="src/InputFileReader.cpp" />
 		<Unit filename="src/InputReader.cpp" />
 		<Unit filename="src/LearningAlgorithm.cpp" />
+		<Unit filename="src/Util.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

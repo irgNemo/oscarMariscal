@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/AlfaBeta.h" />
+		<Unit filename="include/AlfaBetaMax.h" />
 		<Unit filename="include/AssociativeMemories.h" />
 		<Unit filename="include/BinaryAssociativeMemories.h" />
 		<Unit filename="include/CsvFileReader.h" />
@@ -47,12 +49,16 @@
 		<Unit filename="include/OutputWriter.h" />
 		<Unit filename="include/Util.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/AlfaBeta.cpp" />
+		<Unit filename="src/AlfaBetaMax.cpp" />
 		<Unit filename="src/CsvFileReader.cpp" />
 		<Unit filename="src/CsvFileWriter.cpp" />
 		<Unit filename="src/DataFormat.cpp" />
 		<Unit filename="src/InputFileReader.cpp" />
 		<Unit filename="src/InputReader.cpp" />
+		<Unit filename="src/LearnMatrix.cpp" />
 		<Unit filename="src/LearningAlgorithm.cpp" />
+		<Unit filename="src/MemoriasAsociativas.cpp" />
 		<Unit filename="src/OutputFileWriter.cpp" />
 		<Unit filename="src/OutputWriter.cpp" />
 		<Unit filename="src/Util.cpp" />

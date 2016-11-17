@@ -92,7 +92,6 @@ public:
                 }
             }
         }
-
     }
 
 /** \brief method for testing purposes, prints the "M" matrix
@@ -134,7 +133,6 @@ public:
             }
             std::cout << std::endl;
         }
-
     }
 };
 

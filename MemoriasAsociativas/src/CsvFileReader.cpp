@@ -35,18 +35,17 @@ void CsvFileReader::read() {
     vector<string>   row;
     string line;
     string cell;
-
-    while( file ){
+    while(file){
         getline(file,line);
         stringstream lineStream(line);
         row.clear();
-        while(getline( lineStream, cell, ',' ) )
-            row.push_back( cell );
-        if(!row.empty() )
-            matrix.push_back( row );
+        while(getline( lineStream, cell, ',' ))
+            row.push_back(cell);
+        if(!row.empty())
+            matrix.push_back(row);
     }
     //Reads the last line twice, so i do pop_back() to fix it, but it's a patch
-    matrix.pop_back();
+//    matrix.pop_back();
     int** matriz = new int*[matrix.size()];
     for(int i = 0; i <int(matrix.size()) ; ++i){
         matriz[i] = new int[matrix[i].size()];

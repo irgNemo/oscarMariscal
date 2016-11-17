@@ -184,3 +184,119 @@
 1469207942 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\outputfilewriter.cpp
 	"OutputFileWriter.h"
 
+1479343945 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/main.cpp
+	<iostream>
+	"LearningAlgorithm.h"
+	"AssociativeMemories.h"
+	"BinaryAssociativeMemories.h"
+	"LearnMatrix.h"
+	"DataFormat.h"
+	"InputFileReader.h"
+	"InputReader.h"
+	"CsvFileReader.h"
+	"Util.h"
+	"CsvFileWriter.h"
+	"AlfaBeta.h"
+	"AlfaBetaMax.h"
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/LearningAlgorithm.h
+
+1478560526 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AssociativeMemories.h
+	<LearningAlgorithm.h>
+	"DataFormat.h"
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/DataFormat.h
+	<string>
+
+1478763230 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/BinaryAssociativeMemories.h
+	<AssociativeMemories.h>
+
+1479343098 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/LearnMatrix.h
+	<BinaryAssociativeMemories.h>
+	<iostream>
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/InputFileReader.h
+	<InputReader.h>
+	<string>
+	<fstream>
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/InputReader.h
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/CsvFileReader.h
+	"DataFormat.h"
+	<InputFileReader.h>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+
+1479342707 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/Util.h
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/CsvFileWriter.h
+	<OutputFileWriter.h>
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/OutputFileWriter.h
+	<OutputWriter.h>
+	"DataFormat.h"
+
+1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/OutputWriter.h
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/DataFormat.cpp
+	"DataFormat.h"
+	"Util.h"
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/InputFileReader.cpp
+	"InputFileReader.h"
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/InputReader.cpp
+	"InputReader.h"
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/LearningAlgorithm.cpp
+	"LearningAlgorithm.h"
+
+1479343832 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/CsvFileReader.cpp
+	"CsvFileReader.h"
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/CsvFileWriter.cpp
+	"CsvFileWriter.h"
+	<fstream>
+	<iostream>
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/OutputFileWriter.cpp
+	"OutputFileWriter.h"
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/OutputWriter.cpp
+	"OutputWriter.h"
+
+1479420997 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/Util.cpp
+	"Util.h"
+	<cstdlib>
+	<ctime>
+	"LearnMatrix.h"
+	"AlfaBetaMax.h"
+	"DataFormat.h"
+	"CsvFileReader.h"
+	"CsvFileWriter.h"
+	<iostream>
+
+1479401698 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBeta.h
+	<BinaryAssociativeMemories.h>
+
+1479402378 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBeta.cpp
+	"AlfaBeta.h"
+
+1479343145 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMax.h
+	<AlfaBeta.h>
+
+1479412902 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMax.cpp
+	"AlfaBetaMax.h"
+	<iostream>
+	<climits>
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/LearnMatrix.cpp
+	"LearnMatrix.h"
+	<iostream>
+
+1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/MemoriasAsociativas.cpp
+

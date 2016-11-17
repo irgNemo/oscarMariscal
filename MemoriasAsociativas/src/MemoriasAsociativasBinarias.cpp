@@ -1,5 +1,5 @@
 #include "MemoriasAsociativasBinarias.h"
 
-//MemoriasAsociativasBinarias::MemoriasAsociativasBinarias(FormatoDeDatos d):MemoriasAsociativas(d)
-//{
-//}
+////MemoriasAsociativasBinarias::MemoriasAsociativasBinarias(FormatoDeDatos d):MemoriasAsociativas(d)
+////{
+////}

@@ -7,7 +7,10 @@
 class LearnMatrixComplete : public LearnMatrix
 {
     public:
-        LearnMatrixComplete();
+        int * sumVector;
+        LearnMatrixComplete(DataFormat d);
+        void learningMethod();
+        int* retrievalMethod(int* pattern, int n);
     protected:
     private:
 };

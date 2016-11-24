@@ -41,8 +41,9 @@ int* AlfaBetaMaxComplete::retrievalMethod(int* pattern, int n){
             biggestNumber=sumVector[i];
         }
     }
+
     for (int i = 0 ; i < cantMatrixRows; i++){
-        if (sumVector[i]==biggestNumber && result[i] == 1)
+        if (result!=0 && sumVector[i]==biggestNumber && result[i] == 1)
             result[i]=1;
         else
             result[i]=0;

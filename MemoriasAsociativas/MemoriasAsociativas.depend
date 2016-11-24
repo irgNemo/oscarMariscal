@@ -287,10 +287,10 @@
 1479402378 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBeta.cpp
 	"AlfaBeta.h"
 
-1479343145 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMax.h
+1480008292 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMax.h
 	<AlfaBeta.h>
 
-1479427546 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMax.cpp
+1480008466 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMax.cpp
 	"AlfaBetaMax.h"
 	<iostream>
 	<climits>
@@ -301,11 +301,17 @@
 
 1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/MemoriasAsociativas.cpp
 
-1479965708 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMin.cpp
+1479965856 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMin.cpp
 	"AlfaBetaMin.h"
 	<iostream>
 	<climits>
 
 1479965715 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMin.h
 	<AlfaBeta.h>
+
+1480008239 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMaxComplete.cpp
+	"AlfaBetaMaxComplete.h"
+
+1480007539 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMaxComplete.h
+	<AlfaBetaMax.h>
 

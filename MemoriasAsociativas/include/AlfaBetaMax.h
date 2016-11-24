@@ -7,6 +7,9 @@ using namespace std;
 class AlfaBetaMax : public AlfaBeta
 {
     public:
+        /**< This attribute is here so that when the retrieval method is called
+        the recall matrix is saved so it dons't has to be recalculated for this class specializations*/
+        int **endMatrix;
         AlfaBetaMax(DataFormat d);
         virtual ~AlfaBetaMax();
         void oneHot();

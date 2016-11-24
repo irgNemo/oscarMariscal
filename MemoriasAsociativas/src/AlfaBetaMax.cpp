@@ -2,8 +2,13 @@
 
 #include <iostream>
 #include <climits>
+
 AlfaBetaMax::AlfaBetaMax(DataFormat d):AlfaBeta(d) {
-    //ctor
+    endMatrix = new int*[cantMatrixRows];
+    for(int i = 0; i < data.getNumFil(); ++i)
+    {
+        endMatrix[i] = new int[cantColMatriz];
+    }
 }
 
 AlfaBetaMax::~AlfaBetaMax() {
@@ -25,7 +30,7 @@ void AlfaBetaMax::learningMethod() {
                 cout <<  outputVector[i][j]<< "," << fundamentalSet[i][k] ;
                 int alphaResult = alpha(outputVector[i][j],fundamentalSet[i][k]);
                 cout << "=" << alphaResult << " ";
-                if (alphaResult > matrix[j][k]){
+                if (alphaResult > matrix[j][k]) {
                     matrix[j][k]= alphaResult;
                 }
             }
@@ -44,7 +49,6 @@ void AlfaBetaMax::learningMethod() {
 
 int* AlfaBetaMax::retrievalMethod(int* pattern, int n) {
     cout << endl << "+++++++++++++++++++++++++" << endl;
-    int endMatrix[cantMatrixRows][cantColMatriz];
     int *patternToReturn = new int[n];
     /**< initializing in int max the endMatrix, and patter to return */
     for (int i = 0 ; i< cantMatrixRows; i++) {
@@ -73,7 +77,7 @@ int* AlfaBetaMax::retrievalMethod(int* pattern, int n) {
     }
     //TODO remove only for testing
     cout << endl;
-    for (int i = 0 ; i  < data.getNumCol(); i++){
+    for (int i = 0 ; i  < data.getNumCol(); i++) {
         cout << patternToReturn[i] << ", ";
     }
     cout << endl << "+++++++++++++++++++++++++" << endl;

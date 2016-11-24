@@ -184,7 +184,7 @@
 1469207942 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\outputfilewriter.cpp
 	"OutputFileWriter.h"
 
-1479343945 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/main.cpp
+1479421553 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/main.cpp
 	<iostream>
 	"LearningAlgorithm.h"
 	"AssociativeMemories.h"
@@ -201,14 +201,14 @@
 
 1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/LearningAlgorithm.h
 
-1478560526 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AssociativeMemories.h
+1479422284 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AssociativeMemories.h
 	<LearningAlgorithm.h>
 	"DataFormat.h"
 
 1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/DataFormat.h
 	<string>
 
-1478763230 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/BinaryAssociativeMemories.h
+1479423838 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/BinaryAssociativeMemories.h
 	<AssociativeMemories.h>
 
 1479343098 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/LearnMatrix.h
@@ -231,7 +231,8 @@
 	<sstream>
 	<vector>
 
-1479342707 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/Util.h
+1479423785 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/Util.h
+	"DataFormat.h"
 
 1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/CsvFileWriter.h
 	<OutputFileWriter.h>
@@ -269,7 +270,7 @@
 1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/OutputWriter.cpp
 	"OutputWriter.h"
 
-1479420997 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/Util.cpp
+1479423772 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/Util.cpp
 	"Util.h"
 	<cstdlib>
 	<ctime>
@@ -289,7 +290,7 @@
 1479343145 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMax.h
 	<AlfaBeta.h>
 
-1479412902 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMax.cpp
+1479427546 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMax.cpp
 	"AlfaBetaMax.h"
 	<iostream>
 	<climits>
@@ -299,4 +300,12 @@
 	<iostream>
 
 1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/MemoriasAsociativas.cpp
+
+1479965708 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMin.cpp
+	"AlfaBetaMin.h"
+	<iostream>
+	<climits>
+
+1479965715 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMin.h
+	<AlfaBeta.h>
 

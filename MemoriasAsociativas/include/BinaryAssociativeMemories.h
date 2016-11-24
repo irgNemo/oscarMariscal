@@ -41,7 +41,7 @@ public:
     {
         matrix = m;
     };
-    int ** getVectorSalida()
+    int **& getVectorSalida()
     {
         return outputVector;
     };

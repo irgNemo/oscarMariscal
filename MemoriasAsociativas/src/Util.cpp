@@ -54,7 +54,7 @@ void Util::testAlphaBethaMax()
     cout << "Input" << endl;
     alfa.printFundamentalSet();
     cout << "Output" << endl;
-    alfa.oneHot();
+    oneHot(alfa.getFormatoDeDatos(),alfa.getVectorSalida());
     alfa.printOutputVectors();
 
     cout << "Before learning" << endl;
@@ -78,5 +78,26 @@ void Util::testAlphaBethaMax()
 //        for (int j =0 ; j <alfa.getFormatoDeDatos().getNumFil(); j++)
 //            cout << patronDeSalida[j] << ":";
 //        cout << "\n";
+    }
+}
+
+void Util::oneHot(DataFormat data,int **& outputVector) {
+    int numberOfPatterns;
+    //Creating output patterns
+    numberOfPatterns = data.getNumFil();
+    outputVector = new int*[numberOfPatterns];
+    for(int i = 0; i < numberOfPatterns; ++i) {
+        outputVector[i] = new int[numberOfPatterns];
+    }
+    //Filling the output patterns with according values
+    for (int i = 0 ; i< numberOfPatterns; i++) {
+        for (int j = 0; j < numberOfPatterns; j++) {
+            if (i==j) {
+                outputVector[i][j]=1;
+            }
+            else {
+                outputVector[i][j]=0;
+            }
+        }
     }
 }

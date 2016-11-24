@@ -1,19 +1,22 @@
-#include "AlfaBetaMax.h"
+#include "AlfaBetaMin.h"
 
 #include <iostream>
 #include <climits>
-AlfaBetaMax::AlfaBetaMax(DataFormat d):AlfaBeta(d) {
+using namespace std;
+AlfaBetaMin::AlfaBetaMin(DataFormat d ):AlfaBeta(d)
+{
     //ctor
 }
 
-AlfaBetaMax::~AlfaBetaMax() {
+AlfaBetaMin::~AlfaBetaMin()
+{
     //dtor
 }
 /** \brief In this method the learning is made, according to the alpha method
  *
  */
 
-void AlfaBetaMax::learningMethod() {
+void AlfaBetaMin::learningMethod() {
     //TODO there's a mistake in this part, currently it only works int  n x n matrix
     cout << "---------------------------------"<< endl;
     int ** fundamentalSet = data.getFundamentalSet();
@@ -25,7 +28,7 @@ void AlfaBetaMax::learningMethod() {
                 cout <<  outputVector[i][j]<< "," << fundamentalSet[i][k] ;
                 int alphaResult = alpha(outputVector[i][j],fundamentalSet[i][k]);
                 cout << "=" << alphaResult << " ";
-                if (alphaResult > matrix[j][k]){
+                if (alphaResult < matrix[j][k]){
                     matrix[j][k]= alphaResult;
                 }
             }
@@ -42,15 +45,15 @@ void AlfaBetaMax::learningMethod() {
  *
  */
 
-int* AlfaBetaMax::retrievalMethod(int* pattern, int n) {
+int* AlfaBetaMin::retrievalMethod(int* pattern, int n) {
     cout << endl << "+++++++++++++++++++++++++" << endl;
     int endMatrix[cantMatrixRows][cantColMatriz];
     int *patternToReturn = new int[n];
     /**< initializing in int max the endMatrix, and patter to return */
     for (int i = 0 ; i< cantMatrixRows; i++) {
         for (int j = 0 ; j < cantColMatriz; j++) {
-            endMatrix[i][j]=INT_MAX;
-            patternToReturn[j]=INT_MAX;
+            endMatrix[i][j]=INT_MIN;
+            patternToReturn[j]=INT_MIN;
         }
     }
     for (int i = 0 ; i< cantMatrixRows; i++) {
@@ -59,7 +62,7 @@ int* AlfaBetaMax::retrievalMethod(int* pattern, int n) {
             int betaResult  = betha(matrix[i][j], pattern[i]);
             cout << matrix[i][j] << "," << pattern[j];
             cout << "= "<< betaResult << " ";
-            if (betaResult < endMatrix[i][j])
+            if (betaResult > endMatrix[i][j])
                 endMatrix[i][j]=betaResult;
         }
         cout << endl;
@@ -84,7 +87,7 @@ int* AlfaBetaMax::retrievalMethod(int* pattern, int n) {
 /** \brief method for testing purposes, prints the "M" matrix
 *
 */
-void AlfaBetaMax::printMatrix() {
+void AlfaBetaMin::printMatrix() {
     for (int i = 0; i < data.getNumFil() ; i++) {
         for (int j = 0 ; j < data.getNumCol() ; j++) {
             std::cout << matrix[i][j] << ":" ;
@@ -98,7 +101,7 @@ with oneHot to console
  *
  *
  */
-void AlfaBetaMax::printOutputVectors() {
+void AlfaBetaMin::printOutputVectors() {
     for (int i = 0; i < data.getNumFil() ; i++) {
         for (int j = 0 ; j < data.getNumFil() ; j++) {
             std::cout << outputVector[i][j] << ":" ;
@@ -111,7 +114,7 @@ void AlfaBetaMax::printOutputVectors() {
 /** \brief Prints the fundamental set to console
  *
  */
-void AlfaBetaMax::printFundamentalSet() {
+void AlfaBetaMin::printFundamentalSet() {
     int ** conjuntoFundamental;
     conjuntoFundamental = data.getFundamentalSet();
 

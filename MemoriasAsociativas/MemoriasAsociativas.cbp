@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/AlfaBeta.h" />
 		<Unit filename="include/AlfaBetaMax.h" />
+		<Unit filename="include/AlfaBetaMin.h" />
 		<Unit filename="include/AssociativeMemories.h" />
 		<Unit filename="include/BinaryAssociativeMemories.h" />
 		<Unit filename="include/CsvFileReader.h" />
@@ -51,6 +52,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AlfaBeta.cpp" />
 		<Unit filename="src/AlfaBetaMax.cpp" />
+		<Unit filename="src/AlfaBetaMin.cpp" />
 		<Unit filename="src/CsvFileReader.cpp" />
 		<Unit filename="src/CsvFileWriter.cpp" />
 		<Unit filename="src/DataFormat.cpp" />

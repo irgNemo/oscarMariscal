@@ -8,7 +8,6 @@
 class AssociativeMemories : public LearningAlgorithm {
 protected:
     DataFormat data;
-
     int cantMatrixRows;
     int cantColMatriz;
 public:

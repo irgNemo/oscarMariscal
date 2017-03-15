@@ -11,6 +11,7 @@
 
 using std::string;
 
+//TODO el nombre de la clase esta mal, deberia ser csv no cvs
 
 class CsvFileReader : public InputFileReader
 {

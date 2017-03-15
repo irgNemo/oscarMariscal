@@ -17,6 +17,6 @@ using namespace std;
 
 int main()
 {
-    Util::testAlphaBethaMax();
+    Util::testAlphaBethaMaxComplete();
     return 0;
 }

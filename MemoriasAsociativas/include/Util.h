@@ -12,6 +12,7 @@ class Util
         int * getRandomBinaryArray(int sizeOfArray);
         static void testLearnMatrix();
         static void testAlphaBethaMax();
+        static void testAlphaBethaMaxComplete();
         static void oneHot(DataFormat data,int **& outputVector);
 };
 

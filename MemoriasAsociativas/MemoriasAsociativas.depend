@@ -184,7 +184,7 @@
 1469207942 source:c:\users\kepler\documents\github\oscarmariscal\memoriasasociativas\src\outputfilewriter.cpp
 	"OutputFileWriter.h"
 
-1479421553 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/main.cpp
+1480446205 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/main.cpp
 	<iostream>
 	"LearningAlgorithm.h"
 	"AssociativeMemories.h"
@@ -231,7 +231,7 @@
 	<sstream>
 	<vector>
 
-1479423785 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/Util.h
+1480446108 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/Util.h
 	"DataFormat.h"
 
 1476913177 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/CsvFileWriter.h
@@ -270,12 +270,13 @@
 1476913177 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/OutputWriter.cpp
 	"OutputWriter.h"
 
-1479423772 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/Util.cpp
+1488916045 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/Util.cpp
 	"Util.h"
 	<cstdlib>
 	<ctime>
 	"LearnMatrix.h"
 	"AlfaBetaMax.h"
+	"AlfaBetaMaxComplete.h"
 	"DataFormat.h"
 	"CsvFileReader.h"
 	"CsvFileWriter.h"
@@ -309,9 +310,16 @@
 1479965715 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMin.h
 	<AlfaBeta.h>
 
-1480014985 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMaxComplete.cpp
+1481826398 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/AlfaBetaMaxComplete.cpp
 	"AlfaBetaMaxComplete.h"
+	"iostream"
 
 1480007539 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/AlfaBetaMaxComplete.h
 	<AlfaBetaMax.h>
+
+1481828381 source:/home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/src/LearnMatrixComplete.cpp
+	"LearnMatrixComplete.h"
+
+1480015299 /home/oscar/Documents/Codigo/oscarMariscal/MemoriasAsociativas/include/LearnMatrixComplete.h
+	<LearnMatrix.h>
 

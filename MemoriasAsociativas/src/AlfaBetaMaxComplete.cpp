@@ -1,4 +1,7 @@
 #include "AlfaBetaMaxComplete.h"
+#include "iostream"
+
+using namespace std;
 
 AlfaBetaMaxComplete::AlfaBetaMaxComplete(DataFormat d): AlfaBetaMax(d){
     sumVector = new int[data.getNumFil()];
@@ -14,6 +17,7 @@ AlfaBetaMaxComplete::AlfaBetaMaxComplete(DataFormat d): AlfaBetaMax(d){
 void AlfaBetaMaxComplete::learningMethod(){
     AlfaBetaMax::learningMethod();
     /**< Obtaining the sum vector */
+
     for (int i = 0 ; i < cantMatrixRows; i++){
         sumVector[i]=0;
         for (int j = 0; j < cantColMatriz; j++){
@@ -22,6 +26,13 @@ void AlfaBetaMaxComplete::learningMethod(){
             }
         }
     }
+
+    cout << "*****Sum vector*****" << endl;
+    for (int i = 0; i < cantMatrixRows; i++){
+        cout << sumVector[i] << ",";
+    }
+
+    cout <<endl << "*****Sum vector*****" << endl;
 }
 
 /** \brief
@@ -37,7 +48,7 @@ int* AlfaBetaMaxComplete::retrievalMethod(int* pattern, int n){
     /**< obtaining the biggest number */
     int biggestNumber=0;
     for (int i =0 ; i < cantMatrixRows;i++){
-        if ( sumVector[i]> biggestNumber ){
+        if ( result!=0 && sumVector[i]> biggestNumber ){
             biggestNumber=sumVector[i];
         }
     }
@@ -48,4 +59,5 @@ int* AlfaBetaMaxComplete::retrievalMethod(int* pattern, int n){
         else
             result[i]=0;
     }
+    return result;
 }

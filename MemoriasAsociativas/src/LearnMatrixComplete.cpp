@@ -38,7 +38,7 @@ int* LearnMatrixComplete::retrievalMethod(int* pattern, int n){
     /**< obtaining the lowest number */
     int lowestNumber=0;
     for (int i =0 ; i < cantMatrixRows;i++){
-        if ( sumVector[i]< lowestNumber ){
+        if (result!=0 &&  sumVector[i]< lowestNumber ){
             lowestNumber=sumVector[i];
         }
     }
@@ -49,4 +49,5 @@ int* LearnMatrixComplete::retrievalMethod(int* pattern, int n){
         else
             result[i]=0;
     }
+    return result;
 }

@@ -64,7 +64,6 @@
 		<Unit filename="src/LearnMatrix.cpp" />
 		<Unit filename="src/LearnMatrixComplete.cpp" />
 		<Unit filename="src/LearningAlgorithm.cpp" />
-		<Unit filename="src/MemoriasAsociativas.cpp" />
 		<Unit filename="src/OutputFileWriter.cpp" />
 		<Unit filename="src/OutputWriter.cpp" />
 		<Unit filename="src/Util.cpp" />

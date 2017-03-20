@@ -40,7 +40,9 @@ SOURCES += main.cpp\
     AlfaBeta.cpp \
     AlfaBetaMax.cpp \
     AlfaBetaMin.cpp \
-    AlfaBetaMaxComplete.cpp
+    AlfaBetaMaxComplete.cpp \
+    form.cpp \
+    XmlFileReader.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -58,6 +60,9 @@ HEADERS  += mainwindow.h \
     AlfaBeta.h \
     AlfaBetaMax.h \
     AlfaBetaMin.h \
-    AlfaBetaMaxComplete.h
+    AlfaBetaMaxComplete.h \
+    form.h \
+    XmlFileReader.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    form.ui

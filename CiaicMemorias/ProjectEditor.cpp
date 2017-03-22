@@ -12,3 +12,15 @@ ProjectEditor::~ProjectEditor()
 {
     delete ui;
 }
+
+void ProjectEditor::setLineEdits(QString projectName, QString filepathInput, QString filepatOutput)
+{
+    ui->projectNameLineEdit->setText(projectName);
+    ui->inputFileLineEdit->setText(filepathInput);
+    ui->outputFileLineEdit->setText(filepatOutput);
+}
+
+void ProjectEditor::on_saveButton_clicked()
+{
+
+}

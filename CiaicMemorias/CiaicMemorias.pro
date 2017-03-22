@@ -44,7 +44,8 @@ SOURCES += main.cpp\
     AlfaBetaMaxComplete.cpp \
     form.cpp \
     XmlFileReader.cpp \
-    ProjectEditor.cpp
+    ProjectEditor.cpp \
+    XmlFileWriter.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -65,7 +66,8 @@ HEADERS  += mainwindow.h \
     AlfaBetaMaxComplete.h \
     form.h \
     XmlFileReader.h \
-    ProjectEditor.h
+    ProjectEditor.h \
+    XmlFileWriter.h
 
 FORMS    += mainwindow.ui \
     form.ui \

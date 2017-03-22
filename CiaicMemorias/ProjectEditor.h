@@ -14,7 +14,8 @@ class ProjectEditor : public QWidget
 public:
     explicit ProjectEditor(QWidget *parent = 0);
     ~ProjectEditor();
-
+    void on_saveButton_clicked();
+    void setLineEdits(QString projectName, QString filepathInput, QString filepatOutput);
 private:
     Ui::ProjectEditor *ui;
 };

@@ -8,6 +8,7 @@
 #include "QDebug"
 #include "XmlFileReader.h"
 #include <QString>
+#include "ProjectEditor.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -50,29 +51,6 @@ void MainWindow::cargarVentana(QWidget *widget)
 
 void MainWindow::on_actionOpen_project_triggered()
 {
-
-    /*
-     *
-    QString fileName = QFileDialog::getOpenFileName(this,tr("Open XML File 2"), "/home", tr("XML Files (*.xml)"));
-    qDebug() << fileName ;
-    //
-    //readBasicStructure(fileName);
-    XmlFileReader reader;
-    XmlReader reader;
-    std::string fileNameInStd =fileName.toUtf8().constData() ;
-    reader.read(fileNameInStd);
-
-    QTreeWidgetItem* input = new QTreeWidgetItem();
-    input->setText(0,"input");
-    input->setText(1,reader.inputFile);
-    QTreeWidgetItem* output = new QTreeWidgetItem();
-    output ->setText(0,"output");
-    output ->setText(1,reader.outputFile);
-
-    ui->treeWidget->addTopLevelItem(output );
-    ui->treeWidget->addTopLevelItem(input);
-    */
-
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open XML File 2"), "/home", tr("XML Files (*.xml)"));
     qDebug() << fileName ;
     XmlFileReader reader(fileName.toUtf8().constData());
@@ -96,7 +74,19 @@ void MainWindow::on_actionOpen_project_triggered()
 void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
 {
     qDebug() << "Column: " << index.column() << "Row:" << index.row();
-    qDebug() << ui->treeWidget->currentItem()->text(0);
-    cargarVentana(new Form(this));
-    ui->mdiArea->activeSubWindow();
+    QString text = ui->treeWidget->currentItem()->text(0);
+    qDebug() << text;
+//    cargarVentana(new Form(this));
+//    ui->mdiArea->activeSubWindow();
+    //ui->treeWidget->curren
+
+    if (text.compare("ProjectName",Qt::CaseInsensitive) == 0){
+        qDebug() << text << "Inside";
+        ProjectEditor* ventana = new ProjectEditor();
+        QString projectName = ui->treeWidget->currentItem()->text(1);
+        QString inputFile = ui->treeWidget->currentItem()->child(0)->text(1);
+        QString outputFile= ui->treeWidget->currentItem()->child(1)->text(1);
+        ventana->setLineEdits(projectName,inputFile,outputFile);
+        cargarVentana( ventana );
+    }
 }

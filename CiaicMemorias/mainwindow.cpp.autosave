@@ -95,8 +95,8 @@ void MainWindow::on_actionOpen_project_triggered()
 
 void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
 {
-    qDebug() << "Column: " << index.column() << "Row:" << index.row();
-    qDebug() << ui->treeWidget->currentItem()->text(0);
-    cargarVentana(new Form(this));
-    ui->mdiArea->activeSubWindow();
+//    qDebug() << "Column: " << index.column() << "Row:" << index.row();
+//    qDebug() << ui->treeWidget->currentItem()->text(0);
+//    cargarVentana(new Form(this));
+//    ui->mdiArea->activeSubWindow();
 }

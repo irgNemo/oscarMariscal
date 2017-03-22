@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -42,7 +43,8 @@ SOURCES += main.cpp\
     AlfaBetaMin.cpp \
     AlfaBetaMaxComplete.cpp \
     form.cpp \
-    XmlFileReader.cpp
+    XmlFileReader.cpp \
+    ProjectEditor.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -62,7 +64,9 @@ HEADERS  += mainwindow.h \
     AlfaBetaMin.h \
     AlfaBetaMaxComplete.h \
     form.h \
-    XmlFileReader.h
+    XmlFileReader.h \
+    ProjectEditor.h
 
 FORMS    += mainwindow.ui \
-    form.ui
+    form.ui \
+    ProjectEditor.ui

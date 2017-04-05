@@ -1,0 +1,5 @@
+<Project projectName="Alumnos">
+ <Input inputFile="/home/oscar/Documents/Codigo/oscarMariscal/CiaicMemorias/testProject/input.csv"/>
+ <Output outputFile="/home/oscar/Documents/Codigo/oscarMariscal/CiaicMemorias/testProject/output.csv"/>
+ <TestingSets/>
+</Project>

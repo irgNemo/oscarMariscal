@@ -9,6 +9,8 @@
 #include "XmlFileReader.h"
 #include <QString>
 #include "ProjectEditor.h"
+#include "CsvFileReader.h"
+#include "GridEditor.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -73,13 +75,8 @@ void MainWindow::on_actionOpen_project_triggered()
 
 void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
 {
-    qDebug() << "Column: " << index.column() << "Row:" << index.row();
     QString text = ui->treeWidget->currentItem()->text(0);
-    qDebug() << text;
-//    cargarVentana(new Form(this));
-//    ui->mdiArea->activeSubWindow();
-    //ui->treeWidget->curren
-
+    QString contents =ui->treeWidget->currentItem()->text(1);
     if (text.compare("ProjectName",Qt::CaseInsensitive) == 0){
         qDebug() << text << "Inside";
         ProjectEditor* ventana = new ProjectEditor();
@@ -87,6 +84,19 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
         QString inputFile = ui->treeWidget->currentItem()->child(0)->text(1);
         QString outputFile= ui->treeWidget->currentItem()->child(1)->text(1);
         ventana->setLineEdits(projectName,inputFile,outputFile);
-        cargarVentana( ventana );
+        cargarVentana(ventana);
     }
+
+    if (contents.endsWith(".csv",Qt::CaseInsensitive)){
+        CsvFileReader reader(contents.toUtf8().constData());
+        GridEditor* editorCsv = new GridEditor();
+        reader.read();
+        QFile file(contents);
+        //editorCsv->setWindowTitle(file.fileName());
+        qDebug() << file.fileName();
+        DataFormat data = reader.getDataFormat();
+        editorCsv->setDataFormat(data);
+        cargarVentana(editorCsv);
+    }
+
 }

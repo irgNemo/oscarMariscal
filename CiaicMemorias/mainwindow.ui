@@ -57,7 +57,14 @@
     </property>
     <addaction name="actionOpen_project"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionlicenses"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="enabled">
@@ -88,6 +95,11 @@
    </property>
    <property name="text">
     <string>Open project</string>
+   </property>
+  </action>
+  <action name="actionlicenses">
+   <property name="text">
+    <string>Licenses</string>
    </property>
   </action>
  </widget>

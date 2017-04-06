@@ -46,7 +46,10 @@ SOURCES += main.cpp\
     XmlFileReader.cpp \
     ProjectEditor.cpp \
     XmlFileWriter.cpp \
-    GridEditor.cpp
+    GridEditor.cpp \
+    InformationAboutTableWindow.cpp \
+    LicensesWindow.cpp \
+    FileChooserWindow.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -69,12 +72,18 @@ HEADERS  += mainwindow.h \
     XmlFileReader.h \
     ProjectEditor.h \
     XmlFileWriter.h \
-    GridEditor.h
+    GridEditor.h \
+    InformationAboutTableWindow.h \
+    LicensesWindow.h \
+    FileChooserWindow.h
 
 FORMS    += mainwindow.ui \
     form.ui \
     ProjectEditor.ui \
-    GridEditor.ui
+    GridEditor.ui \
+    InformationAboutTableWindow.ui \
+    LicensesWindow.ui \
+    FileChooserWindow.ui
 
 RESOURCES += \
     images.qrc

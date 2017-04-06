@@ -11,6 +11,9 @@
 #include "ProjectEditor.h"
 #include "CsvFileReader.h"
 #include "GridEditor.h"
+#include "InformationAboutTableWindow.h"
+#include "FileChooserWindow.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent) :
     headerItem->setText(0,QString("File Name"));
     headerItem->setText(1,QString("Content"));
     ui->treeWidget->setHeaderItem(headerItem);
+    ui->treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    //connect(ui->treeWidget, SIGNAL(customContextMenuRequested(QPoint)),this, SLOT(on_treeWidget_customContextMenuRequested(QPoint)));
 }
 
 MainWindow::~MainWindow()
@@ -77,6 +82,7 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
 {
     QString text = ui->treeWidget->currentItem()->text(0);
     QString contents =ui->treeWidget->currentItem()->text(1);
+
     if (text.compare("ProjectName",Qt::CaseInsensitive) == 0){
         qDebug() << text << "Inside";
         ProjectEditor* ventana = new ProjectEditor();
@@ -86,17 +92,79 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
         ventana->setLineEdits(projectName,inputFile,outputFile);
         cargarVentana(ventana);
     }
+    else if (text.compare("Set",Qt::CaseInsensitive) == 0){
+        FileChooserWindow * ventana = new FileChooserWindow;
+        cargarVentana(ventana);
+    }
+    else if (text.compare("Test",Qt::CaseInsensitive) == 0){
+        FileChooserWindow * ventana = new FileChooserWindow;
+        cargarVentana(ventana);
+    }
 
     if (contents.endsWith(".csv",Qt::CaseInsensitive)){
         CsvFileReader reader(contents.toUtf8().constData());
         GridEditor* editorCsv = new GridEditor();
+        InformationAboutTableWindow * stadistics = new InformationAboutTableWindow();
         reader.read();
         QFile file(contents);
         //editorCsv->setWindowTitle(file.fileName());
         qDebug() << file.fileName();
         DataFormat data = reader.getDataFormat();
         editorCsv->setDataFormat(data);
+        cargarVentana(stadistics);
         cargarVentana(editorCsv);
     }
 
+}
+
+void MainWindow::on_treeWidget_customContextMenuRequested(const QPoint &pos)
+{
+    qDebug() << "That's where you're right kiddo";
+    QMenu contextMenu(tr("Context menu"), ui->treeWidget);
+
+
+    QAction trainingAction("Add Training set", this);
+    connect(&trainingAction, SIGNAL(triggered()), this, SLOT(addTrainingSet()));
+    contextMenu.addAction(&trainingAction);
+    QAction testingAction("Add Testing set", this);
+    connect(&testingAction, SIGNAL(triggered()), this, SLOT(addTestingSet()));
+    contextMenu.addAction(&testingAction);
+    contextMenu.exec(mapToGlobal( QCursor::pos() ));
+}
+
+void MainWindow::addTrainingSet()
+{
+    QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
+    QTreeWidgetItem * input=  topLevel->child(0);
+    QTreeWidgetItem* topTraining = new QTreeWidgetItem();
+    topTraining  ->setText(0,"Training Sets");
+
+    QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+    bottomTraining ->setText(0,"Set");
+    bottomTraining ->setText(1,"1");
+    topTraining->addChild(bottomTraining);
+
+    input->addChild(topTraining);
+}
+
+void MainWindow::addTestingSet()
+{
+    QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
+    QTreeWidgetItem * input=  topLevel->child(0);
+    QTreeWidgetItem* topTraining = new QTreeWidgetItem();
+    topTraining  ->setText(0,"Testing Sets");
+
+    QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+    bottomTraining ->setText(0,"Test");
+    bottomTraining ->setText(1,"1");
+    topTraining->addChild(bottomTraining);
+
+    input->addChild(topTraining);
+
+}
+
+void MainWindow::on_actionlicenses_triggered()
+{
+    LicensesWindow *licences = new LicensesWindow();
+    licences->show();
 }

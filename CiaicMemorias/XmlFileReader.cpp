@@ -61,7 +61,6 @@ void XmlFileReader::read(std::__cxx11::string direccion)
     projectName = root.attribute("projectName");
     QDomElement son = root.firstChildElement();
     while (!son.isNull()){
-
         if (son.tagName().compare("input",Qt::CaseInsensitive) == 0 ){
             inputFile = son.attribute("inputFile");
         }

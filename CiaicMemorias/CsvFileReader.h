@@ -7,13 +7,14 @@
 #include <sstream>
 #include <vector>
 #include "DataFormat.h"
-
+#include <vector>
 using std::string;
 
 class CsvFileReader : public InputFileReader
 {
     string path;
     DataFormat data;
+    std::vector<string>headers;
     public:
         CsvFileReader(string direccion);
         virtual ~CsvFileReader();
@@ -22,6 +23,7 @@ class CsvFileReader : public InputFileReader
         DataFormat getDataFormat();
         void setDataFormat(DataFormat datos);
 
+        std::vector<string> getHeaders() const;
 };
 
 #endif // CSVFILEREADER_H

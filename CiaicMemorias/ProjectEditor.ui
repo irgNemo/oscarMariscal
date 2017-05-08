@@ -31,33 +31,23 @@
        <item row="0" column="1">
         <widget class="QLineEdit" name="projectNameLineEdit"/>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="inputFileLabel">
-         <property name="text">
-          <string>input Filepath</string>
-         </property>
-         <property name="buddy">
-          <cstring>inputFileLineEdit</cstring>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="inputFileLineEdit"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="outputFileLabel">
-         <property name="text">
-          <string>output Filepath:</string>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
          </property>
-         <property name="buddy">
-          <cstring>outputFileLineEdit</cstring>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
          </property>
-        </widget>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="outputFileLineEdit"/>
-       </item>
-       <item row="4" column="1">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QPushButton" name="cancelButton">
@@ -74,16 +64,6 @@
           </widget>
          </item>
         </layout>
-       </item>
-       <item row="3" column="1">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Preferred</enum>
-         </property>
-        </spacer>
        </item>
       </layout>
      </item>

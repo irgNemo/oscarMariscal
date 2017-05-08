@@ -13,6 +13,11 @@ inline int toInt(std::string s) {
 }
 
 //TODO mover lo necesario al metodo de read. o quitar el metodo read para que todo se haga en el contructor
+vector<string> CsvFileReader::getHeaders() const
+{
+    return headers;
+}
+
 CsvFileReader::CsvFileReader(string direccion):InputFileReader(direccion) {
     path = direccion;
 }
@@ -34,9 +39,17 @@ void CsvFileReader::setDataFormat(DataFormat data){
 void CsvFileReader::read() {
     ifstream file( path.c_str() );
     vector<vector<std::string> >   matrix;
-    vector<string>   row;
+    vector<string>row;
+
     string line;
     string cell;
+
+    getline(file,line);
+    stringstream lineStream(line);
+    row.clear();
+    while(getline( lineStream, cell, ',' ))
+        headers.push_back(cell);
+
     while(file){
         getline(file,line);
         stringstream lineStream(line);
@@ -46,8 +59,6 @@ void CsvFileReader::read() {
         if(!row.empty())
             matrix.push_back(row);
     }
-    //Reads the last line twice, so i do pop_back() to fix it, but it's a patch
-//    matrix.pop_back();
     int** matriz = new int*[matrix.size()];
     for(int i = 0; i <int(matrix.size()) ; ++i){
         matriz[i] = new int[matrix[i].size()];

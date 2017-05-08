@@ -56,6 +56,7 @@
      <string>File</string>
     </property>
     <addaction name="actionOpen_project"/>
+    <addaction name="actionNew_project"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -86,6 +87,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionOpen_project"/>
+   <addaction name="actionNew_project"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen_project">
@@ -100,6 +102,18 @@
   <action name="actionlicenses">
    <property name="text">
     <string>Licenses</string>
+   </property>
+  </action>
+  <action name="actionNew_project">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/Img/Images/201-add-1.png</normaloff>:/Img/Images/201-add-1.png</iconset>
+   </property>
+   <property name="text">
+    <string>new project</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create a new project&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </action>
  </widget>

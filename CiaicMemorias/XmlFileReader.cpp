@@ -32,6 +32,16 @@ void XmlFileReader::setOutputFile(const QString &value)
     outputFile = value;
 }
 
+QStringList XmlFileReader::getTestingSets() const
+{
+    return testingSets;
+}
+
+QStringList XmlFileReader::getTrainingSets() const
+{
+    return trainingSets;
+}
+
 XmlFileReader::XmlFileReader(string f): InputFileReader(f)
 {
 
@@ -62,7 +72,38 @@ void XmlFileReader::read(std::__cxx11::string direccion)
     QDomElement son = root.firstChildElement();
     while (!son.isNull()){
         if (son.tagName().compare("input",Qt::CaseInsensitive) == 0 ){
-            inputFile = son.attribute("inputFile");
+
+            QDomElement first=son.firstChildElement();
+            QDomElement second=first.nextSiblingElement();
+            QDomElement childOfTesting;
+            QDomElement childOfTraining;
+
+            qDebug() << "son.tagName()";
+            qDebug() << son.tagName();
+            if (first.tagName().compare("Testing_Sets",Qt::CaseInsensitive) == 0){
+                childOfTesting =first.firstChildElement() ;
+
+            }
+            else if (first.tagName().compare("Training_Sets",Qt::CaseInsensitive) == 0){
+                childOfTraining = first.firstChildElement();
+            }
+            if (second.tagName().compare("Testing_Sets",Qt::CaseInsensitive) == 0){
+                childOfTesting =second.firstChildElement();
+            }
+            else if (second.tagName().compare("Training_Sets",Qt::CaseInsensitive) == 0){
+                childOfTraining = second.firstChildElement();
+            }
+            qDebug() << childOfTesting.isNull();
+            while(!childOfTesting.isNull()){
+                QString testingFile = childOfTesting.attribute("File");
+                testingSets.append(testingFile);
+                childOfTesting=childOfTesting.nextSiblingElement();
+            }
+            while(!childOfTraining.isNull()){
+                QString trainingFile = childOfTraining.attribute("File");
+                trainingSets.append(trainingFile);
+                childOfTraining=childOfTesting.nextSiblingElement();
+            }
         }
         else if (son.tagName().compare("output",Qt::CaseInsensitive) == 0 ){
             outputFile = son.attribute("outputFile");

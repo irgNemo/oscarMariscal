@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -29,12 +29,12 @@
        <string>Name:</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit</cstring>
+       <cstring>lineEdit_name</cstring>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit_name"/>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_2">
@@ -42,12 +42,12 @@
        <string>size:</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit_2</cstring>
+       <cstring>lineEdit_Size</cstring>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_Size"/>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_3">
@@ -55,12 +55,12 @@
        <string>Mean:</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit_3</cstring>
+       <cstring>lineEdit_Mean</cstring>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="lineEdit_Mean"/>
     </item>
    </layout>
   </widget>

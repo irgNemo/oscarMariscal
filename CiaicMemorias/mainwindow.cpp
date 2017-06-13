@@ -16,6 +16,7 @@
 #include "FileChooserWindow.h"
 #include "XmlFileWriter.h"
 #include <vector>
+#include "QFont"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -28,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
     headerItem->setText(1,QString("Content"));
     ui->treeWidget->setHeaderItem(headerItem);
     ui->treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+
 }
 
 MainWindow::~MainWindow()
@@ -45,6 +47,11 @@ void MainWindow::cargarVentana(QWidget *widget)
     window->show();
 }
 
+
+/*
+ * This method opens the project
+ *
+ */
 void MainWindow::on_actionOpen_project_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this,tr("Open XML File 2"), "/home", tr("XML Files (*.xml)"));
@@ -112,18 +119,6 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
         ventana->setLineEdits(projectName,inputFile,outputFile);
         cargarVentana(ventana);
     }*/
-    if (text.contains("Set") == 0){
-        FileChooserWindow * ventana = new FileChooserWindow;
-        QTreeWidgetItem * item=ui->treeWidget->currentItem();
-        ventana->setItemOfFileTreeToEdit(item);
-        cargarVentana(ventana);
-    }
-    else if (text.contains("Test") == 0){
-        FileChooserWindow * ventana = new FileChooserWindow;
-        ventana->setItemOfFileTreeToEdit(ui->treeWidget->currentItem());
-        cargarVentana(ventana);
-    }
-
     if (contents.endsWith(".csv",Qt::CaseInsensitive)){
         CsvFileReader reader(contents.toUtf8().constData());
         GridEditor* editorCsv = new GridEditor();
@@ -141,6 +136,19 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
         cargarVentana(stadistics);
         cargarVentana(editorCsv);
     }
+    else if (text.contains("Set") == 0){
+        FileChooserWindow * ventana = new FileChooserWindow;
+        QTreeWidgetItem * item=ui->treeWidget->currentItem();
+        ventana->setItemOfFileTreeToEdit(item);
+        cargarVentana(ventana);
+    }
+    else if (text.contains("Test") == 0){
+        FileChooserWindow * ventana = new FileChooserWindow;
+        ventana->setItemOfFileTreeToEdit(ui->treeWidget->currentItem());
+        cargarVentana(ventana);
+    }
+
+
 
 }
 
@@ -161,19 +169,54 @@ void MainWindow::on_treeWidget_customContextMenuRequested(const QPoint &pos)
     contextMenu.exec( QCursor::pos());
 }
 
+void MainWindow::selectCurrentProject(QString name)
+{
+    /*QFont font("" , 9 , QFont::Bold );
+        QBrush b (Qt::red);
+        item->setForeground( 0 , b );
+        item->setFont( 0,  font );*/
+
+}
+
 void MainWindow::addTrainingSet()
 {
     QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
     QTreeWidgetItem * input=  topLevel->child(0);
     QTreeWidgetItem* topTraining = new QTreeWidgetItem();
-    topTraining  ->setText(0,"Training Sets");
+    QString topLabelName ="Training Sets";
+    topTraining  ->setText(0,topLabelName);
 
-    QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
-    bottomTraining ->setText(0,"Set");
-    bottomTraining ->setText(1,"1");
-    topTraining->addChild(bottomTraining);
+    if (ui->treeWidget->findItems(topLabelName,Qt::MatchExactly|Qt::MatchRecursive).empty()){
+        QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+        bottomTraining ->setText(0,"Train");
+        bottomTraining ->setText(1,"1");
+        topTraining->addChild(bottomTraining);
+        input->addChild(topTraining);
+    }
+    else{
+        QTreeWidgetItem * trainingSet;
+        if(input->childCount()==0){
+            trainingSet = input->child(0);
+        }
+        else{
+            if (QString::compare(input->child(0)->text(0),topLabelName)==0){
+                trainingSet =  input->child(0);
+            }
+            else{
+                trainingSet =  input->child(1);
+            }
+        }
 
-    input->addChild(topTraining);
+        QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+        bottomTraining ->setText(0,"Train");
+        bottomTraining ->setText(1,QString::number(trainingSet->childCount()+1) );
+        trainingSet->addChild(bottomTraining);
+        input->addChild(trainingSet);
+
+    }
+
+    ui->treeWidget->expandAll();
+    ui->treeWidget->resizeColumnToContents(0);
 }
 
 void MainWindow::addTestingSet()
@@ -181,13 +224,38 @@ void MainWindow::addTestingSet()
     QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
     QTreeWidgetItem * input=  topLevel->child(0);
     QTreeWidgetItem* topTraining = new QTreeWidgetItem();
-    topTraining  ->setText(0,"Testing Sets");
 
-    QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
-    bottomTraining ->setText(0,"Test");
-    bottomTraining ->setText(1,"1");
-    topTraining->addChild(bottomTraining);
-    input->addChild(topTraining);
+    if (ui->treeWidget->findItems(QString("Testing Sets"),Qt::MatchExactly|Qt::MatchRecursive).empty()){
+        topTraining  ->setText(0,"Testing Sets");
+        QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+        bottomTraining ->setText(0,"Test");
+        bottomTraining ->setText(1,"1");
+        topTraining->addChild(bottomTraining);
+        input->addChild(topTraining);
+    }
+    else{
+        QTreeWidgetItem* testinSet;
+        if (input->childCount()==0){
+            testinSet =  input->child(0);
+        }
+        else{
+            if (QString::compare(input->child(0)->text(0),"Testing Sets")==0){
+                testinSet =  input->child(0);
+            }
+            else{
+                testinSet =  input->child(1);
+            }
+        }
+
+        QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+        bottomTraining ->setText(0,"Test");
+        bottomTraining ->setText(1,QString::number(testinSet->childCount()+1) );
+        testinSet->addChild(bottomTraining);
+        input->addChild(testinSet);
+    }
+
+    ui->treeWidget->expandAll();
+    ui->treeWidget->resizeColumnToContents(0);
 }
 
 void MainWindow::saveProject()
@@ -264,7 +332,6 @@ void MainWindow::on_actionNew_project_triggered()
     qDebug() << "Helos";
     ProjectEditor* ventana = new ProjectEditor();
     ventana->setTreeWidget(ui->treeWidget);
-    //ventana->setLineEdits(projectName,inputFile,outputFile);
     cargarVentana(ventana);
 
 }

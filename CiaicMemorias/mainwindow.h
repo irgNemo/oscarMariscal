@@ -23,6 +23,7 @@ private slots:
     void on_actionOpen_project_triggered();
     void on_treeWidget_doubleClicked(const QModelIndex &index);
     void on_treeWidget_customContextMenuRequested(const QPoint &pos);
+    void selectCurrentProject(QString name);
     void addTrainingSet();
     void addTestingSet();
     void saveProject();

@@ -28,6 +28,7 @@ void GridEditor::setDataFormat(DataFormat data)
             tabla->setItem(i,j, new QTableWidgetItem( QString::number( values[i][j]) ));
         }
     }
+    tabla->resizeColumnsToContents();
 }
 
 int GridEditor::getRowCount() const

@@ -62,7 +62,7 @@ void XmlFileWriter::write()
         int i=0;
         QDomElement topTesting = document.createElement("Testing_Sets");
         foreach (QString testFile, testingSets) {
-            QDomElement test  = document.createElement("Test_"+QString::number(i));
+            QDomElement test  = document.createElement("Test_"+QString::number(i+1));
             test.setAttribute("File", testFile);
             i++;
             topTesting.appendChild(test);
@@ -74,7 +74,7 @@ void XmlFileWriter::write()
         QDomElement topTraining = document.createElement("Training_Sets");
 
         foreach (QString trainingFile, trainingSets) {
-            QDomElement training  = document.createElement("Train_"+QString::number(i));
+            QDomElement training  = document.createElement("Train_"+QString::number(i+1));
             training.setAttribute("File", trainingFile);
             i++;
             topTraining.appendChild(training);

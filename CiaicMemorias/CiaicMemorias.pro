@@ -49,7 +49,8 @@ SOURCES += main.cpp\
     GridEditor.cpp \
     InformationAboutTableWindow.cpp \
     LicensesWindow.cpp \
-    FileChooserWindow.cpp
+    FileChooserWindow.cpp \
+    executewindow.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -75,7 +76,8 @@ HEADERS  += mainwindow.h \
     GridEditor.h \
     InformationAboutTableWindow.h \
     LicensesWindow.h \
-    FileChooserWindow.h
+    FileChooserWindow.h \
+    executewindow.h
 
 FORMS    += mainwindow.ui \
     form.ui \
@@ -83,7 +85,8 @@ FORMS    += mainwindow.ui \
     GridEditor.ui \
     InformationAboutTableWindow.ui \
     LicensesWindow.ui \
-    FileChooserWindow.ui
+    FileChooserWindow.ui \
+    executewindow.ui
 
 RESOURCES += \
     images.qrc

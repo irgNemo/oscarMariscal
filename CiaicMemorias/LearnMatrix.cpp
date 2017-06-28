@@ -82,7 +82,6 @@ void LearnMatrix::printMatrix() {
     }
 }
 
-//TODO Still have to make it work with qdebug.
 void LearnMatrix::printOutputVectors() {
     for (int i = 0; i < data.getNumFil() ; i++) {
         for (int j = 0 ; j < data.getNumFil() ; j++) {

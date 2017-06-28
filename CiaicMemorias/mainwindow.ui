@@ -57,6 +57,7 @@
     </property>
     <addaction name="actionOpen_project"/>
     <addaction name="actionNew_project"/>
+    <addaction name="actionExecute"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -88,6 +89,7 @@
    </attribute>
    <addaction name="actionOpen_project"/>
    <addaction name="actionNew_project"/>
+   <addaction name="actionExecute"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen_project">
@@ -114,6 +116,18 @@
    </property>
    <property name="toolTip">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create a new project&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionExecute">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/Img/Images/201-light-bulb.png</normaloff>:/Img/Images/201-light-bulb.png</iconset>
+   </property>
+   <property name="text">
+    <string>Execute</string>
+   </property>
+   <property name="toolTip">
+    <string>Opens the execute window</string>
    </property>
   </action>
  </widget>

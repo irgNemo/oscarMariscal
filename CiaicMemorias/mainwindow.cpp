@@ -17,6 +17,7 @@
 #include "XmlFileWriter.h"
 #include <vector>
 #include "QFont"
+#include "executewindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -166,6 +167,9 @@ void MainWindow::on_treeWidget_customContextMenuRequested(const QPoint &pos)
     QAction saveProjectAction("Save project", this);
     connect(&saveProjectAction, SIGNAL(triggered()), this, SLOT(saveProject()));
     contextMenu.addAction(&saveProjectAction);
+    QAction selectTopProject("Select as current project", this);
+    connect(&selectTopProject, SIGNAL(triggered()), this, SLOT(selectTopProject()));
+    contextMenu.addAction(&selectTopProject);
     contextMenu.exec( QCursor::pos());
 }
 
@@ -320,6 +324,14 @@ void MainWindow::saveProject()
 
 }
 
+void MainWindow::selectTopProject()
+{
+    QTreeWidgetItem *item =ui->treeWidget->topLevelItem(0);
+    QFont font("", 9 , QFont::Bold );
+    item->setFont(0,font);
+
+}
+
 
 void MainWindow::on_actionlicenses_triggered()
 {
@@ -329,9 +341,19 @@ void MainWindow::on_actionlicenses_triggered()
 
 void MainWindow::on_actionNew_project_triggered()
 {
-    qDebug() << "Helos";
+    //qDebug() << "Helos";
     ProjectEditor* ventana = new ProjectEditor();
     ventana->setTreeWidget(ui->treeWidget);
+    cargarVentana(ventana);
+
+}
+
+void MainWindow::on_actionExecute_triggered()
+{
+    ExecuteWindow* ventana = new ExecuteWindow();
+    //TODO replace for the code of current project
+    ventana->setProject(ui->treeWidget->topLevelItem(0));
+    ventana->fillComboBoxes();
     cargarVentana(ventana);
 
 }

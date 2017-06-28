@@ -28,10 +28,14 @@ private slots:
     void addTestingSet();
     void saveProject();
 
+    void selectTopProject();
+
 
     void on_actionlicenses_triggered();
 
     void on_actionNew_project_triggered();
+
+    void on_actionExecute_triggered();
 
 private:
     Ui::MainWindow *ui;

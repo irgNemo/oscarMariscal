@@ -1,0 +1,11 @@
+<Project projectName="sdlvkjs">
+ <Input>
+  <Testing_Sets>
+   <Test_0 File="/home/oscar/Documents/Codigo/oscarMariscal/CiaicMemorias/testProject/inputTesting.csv"/>
+  </Testing_Sets>
+  <Training_Sets>
+   <Train_0 File="/home/oscar/Documents/Codigo/oscarMariscal/CiaicMemorias/testProject/inputTraining.csv"/>
+  </Training_Sets>
+ </Input>
+ <Output outputFile=""/>
+</Project>

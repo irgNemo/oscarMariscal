@@ -50,7 +50,8 @@ SOURCES += main.cpp\
     InformationAboutTableWindow.cpp \
     LicensesWindow.cpp \
     FileChooserWindow.cpp \
-    executewindow.cpp
+    executewindow.cpp \
+    ShowTest.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -77,7 +78,8 @@ HEADERS  += mainwindow.h \
     InformationAboutTableWindow.h \
     LicensesWindow.h \
     FileChooserWindow.h \
-    executewindow.h
+    executewindow.h \
+    ShowTest.h
 
 FORMS    += mainwindow.ui \
     form.ui \
@@ -86,7 +88,8 @@ FORMS    += mainwindow.ui \
     InformationAboutTableWindow.ui \
     LicensesWindow.ui \
     FileChooserWindow.ui \
-    executewindow.ui
+    executewindow.ui \
+    ShowTest.ui
 
 RESOURCES += \
     images.qrc

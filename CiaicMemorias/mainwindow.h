@@ -39,6 +39,8 @@ private slots:
 
     void on_actionExecute_triggered();
 
+    void on_actionOpenTest_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

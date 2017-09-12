@@ -51,7 +51,8 @@ SOURCES += main.cpp\
     LicensesWindow.cpp \
     FileChooserWindow.cpp \
     executewindow.cpp \
-    viewTestResults.cpp
+    viewTestResults.cpp \
+    ShowTest.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -79,7 +80,8 @@ HEADERS  += mainwindow.h \
     LicensesWindow.h \
     FileChooserWindow.h \
     executewindow.h \
-    viewTestResults.h
+    viewTestResults.h \
+    ShowTest.h
 
 FORMS    += mainwindow.ui \
     form.ui \
@@ -89,7 +91,8 @@ FORMS    += mainwindow.ui \
     LicensesWindow.ui \
     FileChooserWindow.ui \
     executewindow.ui \
-    viewTestResults.ui
+    viewTestResults.ui \
+    ShowTest.ui
 
 RESOURCES += \
     images.qrc

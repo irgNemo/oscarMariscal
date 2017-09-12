@@ -76,7 +76,7 @@ void ExecuteWindow::applyLearnMatrix()
     //Writing
     DataFormat dataToWrite;
     dataToWrite.setFundamentalSet(learn.getMatriz());
-    //TODO Check to se if this is the correct things!.
+    //TODO Check to se if this is the correct way to make the columns and rows!.
     dataToWrite.setNumCol(data.getNumCol());
     dataToWrite.setNumFil(data.getNumFil());
     CsvFileWriter writer;
@@ -87,6 +87,7 @@ void ExecuteWindow::applyLearnMatrix()
                             tr("Csv file (*.csv);;All Files (*)"));
     writer.setFileName(fileName.toUtf8().constData());
 
+    project->child(1)->setText(1,fileName);
 
     writer.write();
 

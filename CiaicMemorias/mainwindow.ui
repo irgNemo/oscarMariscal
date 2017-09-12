@@ -48,7 +48,7 @@
      <x>0</x>
      <y>0</y>
      <width>818</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -90,6 +90,7 @@
    <addaction name="actionOpen_project"/>
    <addaction name="actionNew_project"/>
    <addaction name="actionExecute"/>
+   <addaction name="actionOpenTest"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen_project">
@@ -128,6 +129,11 @@
    </property>
    <property name="toolTip">
     <string>Opens the execute window</string>
+   </property>
+  </action>
+  <action name="actionOpenTest">
+   <property name="text">
+    <string>OpenTest</string>
    </property>
   </action>
  </widget>

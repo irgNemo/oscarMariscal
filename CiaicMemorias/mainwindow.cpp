@@ -19,7 +19,7 @@
 #include "QFont"
 #include <qfontinfo.h>
 #include "executewindow.h"
-
+#include "ShowTest.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -426,4 +426,12 @@ void MainWindow::on_actionExecute_triggered()
     ventana->fillComboBoxes();
     cargarVentana(ventana);
 
+}
+
+void MainWindow::on_actionOpenTest_triggered()
+{
+   ShowTest* ventana = new ShowTest();
+   ventana->setProject(ui->treeWidget->topLevelItem(0));
+   ventana->fillComboBoxes();
+   cargarVentana(ventana);
 }

@@ -17,6 +17,7 @@
 #include "XmlFileWriter.h"
 #include <vector>
 #include "QFont"
+#include <qfontinfo.h>
 #include "executewindow.h"
 
 
@@ -184,13 +185,26 @@ void MainWindow::selectCurrentProject(QString name)
 
 void MainWindow::addTrainingSet()
 {
-    QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
+    QTreeWidgetItem * topLevel =  getTopProject();
     QTreeWidgetItem * input=  topLevel->child(0);
     QTreeWidgetItem* topTraining = new QTreeWidgetItem();
     QString topLabelName ="Training Sets";
     topTraining  ->setText(0,topLabelName);
+    bool trainingSets=false;
+    //
 
-    if (ui->treeWidget->findItems(topLabelName,Qt::MatchExactly|Qt::MatchRecursive).empty()){
+
+
+    if (input->childCount()>=2){
+
+        trainingSets = QString::compare( input->child(0)->text(0),topLabelName,Qt::CaseInsensitive)==0 || QString::compare( input->child(1)->text(0),topLabelName,Qt::CaseInsensitive)==0;
+    }
+    else if (input->childCount()==1){
+        trainingSets = QString::compare( input->child(0)->text(0),topLabelName,Qt::CaseInsensitive)==0;
+    }
+    //TODO: there's an error in the next if,
+    qDebug() << input->childCount();
+    if (!trainingSets){
         QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
         bottomTraining ->setText(0,"Train");
         bottomTraining ->setText(1,"1");
@@ -225,11 +239,23 @@ void MainWindow::addTrainingSet()
 
 void MainWindow::addTestingSet()
 {
-    QTreeWidgetItem * topLevel =  ui->treeWidget->topLevelItem(0);
+    QTreeWidgetItem * topLevel =  getTopProject();
     QTreeWidgetItem * input=  topLevel->child(0);
     QTreeWidgetItem* topTraining = new QTreeWidgetItem();
+    bool testingSets=false;
+    QString textToSearchFor = "Testing Sets";
 
-    if (ui->treeWidget->findItems(QString("Testing Sets"),Qt::MatchExactly|Qt::MatchRecursive).empty()){
+    if (input->childCount()>=2){
+
+        testingSets = QString::compare( input->child(0)->text(0),textToSearchFor,Qt::CaseInsensitive)==0 || QString::compare( input->child(1)->text(0),textToSearchFor,Qt::CaseInsensitive)==0;
+    }
+    else if (input->childCount()==1){
+        testingSets = QString::compare( input->child(0)->text(0),textToSearchFor,Qt::CaseInsensitive)==0;
+    }
+    //if (ui->treeWidget->findItems(QString("Testing Sets"),Qt::MatchExactly|Qt::MatchRecursive).empty()){
+
+    if (!testingSets){
+
         topTraining  ->setText(0,"Testing Sets");
         QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
         bottomTraining ->setText(0,"Test");
@@ -250,6 +276,14 @@ void MainWindow::addTestingSet()
                 testinSet =  input->child(1);
             }
         }
+
+        /*
+        QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
+        bottomTraining ->setText(0,"Train");
+        bottomTraining ->setText(1,QString::number(trainingSet->childCount()+1) );
+        trainingSet->addChild(bottomTraining);
+        input->addChild(trainingSet);
+        */
 
         QTreeWidgetItem* bottomTraining = new QTreeWidgetItem();
         bottomTraining ->setText(0,"Test");
@@ -324,12 +358,46 @@ void MainWindow::saveProject()
 
 }
 
+
+
+//Selects the current project on the qtreewidget
 void MainWindow::selectTopProject()
 {
-    QTreeWidgetItem *item =ui->treeWidget->topLevelItem(0);
-    QFont font("", 9 , QFont::Bold );
-    item->setFont(0,font);
+    //Making other items normal fornt
+    for( int i = 0; i < ui->treeWidget->topLevelItemCount(); ++i )
+    {
+       QTreeWidgetItem *item = ui->treeWidget->topLevelItem( i );
+       item->setFont(0,ui->treeWidget->font());
+    }
+    //Setting selected item as bold
+    QList<QTreeWidgetItem *> itemList;
+    itemList = ui->treeWidget->selectedItems();
+    QTreeWidgetItem *item =itemList[0];
+    if (!item->parent()){
+        QFont font("", 10 , QFont::Bold );
+        item->setFont(0,font);
+    }
+    else{
+        do{
+           item = item->parent();
+        }while(item->parent());
+        QFont font("", 10 , QFont::Bold );
+        item->setFont(0,font);
+    }
+    getTopProject();
 
+}
+
+QTreeWidgetItem *MainWindow::getTopProject()
+{
+    for( int i = 0; i < ui->treeWidget->topLevelItemCount(); ++i )
+    {
+       QTreeWidgetItem *item = ui->treeWidget->topLevelItem( i );
+       if (item->font(0).bold()){
+           qDebug() << "Se encontro: " << item->text(1);
+           return item;
+       }
+    }
 }
 
 
@@ -339,20 +407,22 @@ void MainWindow::on_actionlicenses_triggered()
     licences->show();
 }
 
+//Opens the dialog for creating a new project
 void MainWindow::on_actionNew_project_triggered()
 {
-    //qDebug() << "Helos";
     ProjectEditor* ventana = new ProjectEditor();
     ventana->setTreeWidget(ui->treeWidget);
     cargarVentana(ventana);
 
 }
 
+//Opens a window with the dialog to execute the learning project
 void MainWindow::on_actionExecute_triggered()
 {
     ExecuteWindow* ventana = new ExecuteWindow();
     //TODO replace for the code of current project
-    ventana->setProject(ui->treeWidget->topLevelItem(0));
+    QTreeWidgetItem* project = getTopProject();
+    ventana->setProject(project );
     ventana->fillComboBoxes();
     cargarVentana(ventana);
 

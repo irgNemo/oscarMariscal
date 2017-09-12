@@ -5,6 +5,7 @@
 #include "form.h"
 #include <QString>
 #include "LicensesWindow.h"
+#include <QTreeWidgetItem>
 
 namespace Ui {
 class MainWindow;
@@ -29,6 +30,7 @@ private slots:
     void saveProject();
 
     void selectTopProject();
+    QTreeWidgetItem* getTopProject();
 
 
     void on_actionlicenses_triggered();

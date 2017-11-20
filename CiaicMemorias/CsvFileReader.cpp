@@ -50,8 +50,8 @@ void CsvFileReader::read() {
     while(getline( lineStream, cell, ',' ))
         headers.push_back(cell);
 
-    while(file){
-        getline(file,line);
+    while(getline(file,line)){
+
         stringstream lineStream(line);
         row.clear();
         while(getline( lineStream, cell, ',' ))

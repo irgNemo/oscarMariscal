@@ -4,12 +4,19 @@
 #include <CsvFileReader.h>
 #include <QDebug>
 #include "LearnMatrix.h"
+#include "BinaryAssociativeMemories.h"
+#include "DataFormat.h"
+#include "qdebug.h"
+#include "CsvFileReader.h"
+#include <string>
+
 
 ShowTest::ShowTest(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ShowTest)
 {
     ui->setupUi(this);
+
 }
 
 ShowTest::~ShowTest()
@@ -26,6 +33,7 @@ void ShowTest::fillComboBoxes()
 {
     QTreeWidgetItem* input = project->child(0);
     QTreeWidgetItem* topTestingSets;
+    output = project->child(1);
     //There needs to be at least one training and testing set.
     if (input->childCount()>1){
         if (input->child(0)->text(0).compare("training sets",Qt::CaseInsensitive) == 0){
@@ -37,16 +45,40 @@ void ShowTest::fillComboBoxes()
 
     }
     testingSets= topTestingSets;
-    //Filling the comboBoxes, to choose the testing and training set.
+
     for (int i = 0; i < testingSets->childCount();i++){
         QFileInfo fileInfo(testingSets->child(i)->text(1));
         QString filename(fileInfo.fileName());
         ui->comboBoxTesting->addItem(filename,QVariant(i));//saving the index of the child node in qvariant
     }
+
+}
+
+//Creates a learning algorithm based on the info in the tree.
+void ShowTest::recreateLearningAlgorithm()
+{
+
+
+    //QString matrix = output->text(1);
+    //QString outputVectors = project->child(2)->text(1);
+    //std::string pathMatrix = matrix.toUtf8().constData();
+    //std::string pathOutputVector = outputVectors.toUtf8().constData();
+    //CsvFileReader reader(pathMatrix);
+    //CsvFileReader reader(pathOutputVector);
+    //LearnMatrix* learn = new LearnMatrix(reader.getDataFormat());
+    //algorithm = learn;
+    //learn->set
+    //Reading the files;
+
+
+    //learn->setMatriz(reader.getDataFormat().getFundamentalSet());
+    //algorithm.setMatriz();
+    //algorithm.setVectorSalida();
 }
 
 void ShowTest::on_pushButton_pressed()
 {
+
     /*
     //Getting the fiels
     int indexOffileToUse = ui->comboBoxTesting->currentIndex();

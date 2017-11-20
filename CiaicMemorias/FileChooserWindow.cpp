@@ -31,4 +31,5 @@ void FileChooserWindow::on_pushButton_clicked()
 void FileChooserWindow::on_pushButton_save_clicked()
 {
     item->setText(1,ui->lineEditFile->text());
+    this->parentWidget()->close();
 }

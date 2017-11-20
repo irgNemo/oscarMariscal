@@ -30,19 +30,22 @@ void ProjectEditor::setTreeWidget(QTreeWidget *tree)
 
 void ProjectEditor::on_saveButton_clicked()
 {
-    qDebug() << "On othe save button slot";
     QTreeWidgetItem* projectName = new QTreeWidgetItem();
     projectName->setText(0,"ProjectName");
     projectName->setText(1,ui->projectNameLineEdit->text());
     QTreeWidgetItem* input = new QTreeWidgetItem();
     input->setText(0,"input");
-    //input->addChild(topTraining);
+
 
     QTreeWidgetItem* output = new QTreeWidgetItem();
-    output ->setText(0,"output");
+    output ->setText(0,"learnMatrix");
+    QTreeWidgetItem* outputVector = new QTreeWidgetItem();
+    outputVector ->setText(0,"outputVectors");
 
     projectName->addChild(input);
     projectName->addChild(output);
+    projectName->addChild(outputVector);
     tree->addTopLevelItem(projectName);
+    this->parentWidget()->close();
 
 }

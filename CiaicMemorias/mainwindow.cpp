@@ -156,7 +156,7 @@ void MainWindow::on_treeWidget_doubleClicked(const QModelIndex &index)
 
 void MainWindow::on_treeWidget_customContextMenuRequested(const QPoint &pos)
 {
-    qDebug() << "That's where you're right kiddo";
+
     QMenu contextMenu;
 
     QAction trainingAction("Add Training set", this);
@@ -176,10 +176,6 @@ void MainWindow::on_treeWidget_customContextMenuRequested(const QPoint &pos)
 
 void MainWindow::selectCurrentProject(QString name)
 {
-    /*QFont font("" , 9 , QFont::Bold );
-        QBrush b (Qt::red);
-        item->setForeground( 0 , b );
-        item->setFont( 0,  font );*/
 
 }
 
@@ -360,7 +356,8 @@ void MainWindow::saveProject()
 
 
 
-//Selects the current project on the qtreewidget
+//Selects the current project on the qtreewidget, using the currentItem
+// as the "top" project
 void MainWindow::selectTopProject()
 {
     //Making other items normal fornt
@@ -388,8 +385,20 @@ void MainWindow::selectTopProject()
 
 }
 
+/*
+ *This method returns the top project, select the project in bold. if there's only
+ * one then returns the only project and select's it as the current project.
+ */
 QTreeWidgetItem *MainWindow::getTopProject()
 {
+
+    if (ui->treeWidget->topLevelItemCount() == 1){
+        QFont font("", 10 , QFont::Bold );
+
+        ui->treeWidget->topLevelItem(0)->setFont(0,font);
+        return ui->treeWidget->topLevelItem(0);
+
+    }
     for( int i = 0; i < ui->treeWidget->topLevelItemCount(); ++i )
     {
        QTreeWidgetItem *item = ui->treeWidget->topLevelItem( i );
@@ -420,9 +429,8 @@ void MainWindow::on_actionNew_project_triggered()
 void MainWindow::on_actionExecute_triggered()
 {
     ExecuteWindow* ventana = new ExecuteWindow();
-    //TODO replace for the code of current project
     QTreeWidgetItem* project = getTopProject();
-    ventana->setProject(project );
+    ventana->setProject(project);
     ventana->fillComboBoxes();
     cargarVentana(ventana);
 
@@ -433,5 +441,6 @@ void MainWindow::on_actionOpenTest_triggered()
    ShowTest* ventana = new ShowTest();
    ventana->setProject(ui->treeWidget->topLevelItem(0));
    ventana->fillComboBoxes();
+   ventana->recreateLearningAlgorithm();
    cargarVentana(ventana);
 }

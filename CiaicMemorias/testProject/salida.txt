@@ -1,0 +1,56 @@
+current: 0testing on: 1
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 0testing on: 2
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 0testing on: 3
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 1testing on: 0
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 1testing on: 2
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 1testing on: 3
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 2testing on: 0
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 2testing on: 1
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 2testing on: 3
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 3testing on: 0
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 3testing on: 1
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+current: 3testing on: 2
+1 : 0 : 0
+0 : 0 : 0
+0 : 1 : 0
+on: 1
+1 : 0 : 0 : 
+0 : 0 : 0 : 
+0 : 1 : 0 : 
+current: 3testing on: 2
+1 : 0 : 0 : 
+0 : 0 : 0 : 
+0 : 1 : 0 : 

@@ -52,7 +52,8 @@ SOURCES += main.cpp\
     FileChooserWindow.cpp \
     executewindow.cpp \
     viewTestResults.cpp \
-    ShowTest.cpp
+    ShowTest.cpp \
+    ConfusionMatrix.cpp
 
 HEADERS  += mainwindow.h \
     AssociativeMemories.h \
@@ -81,7 +82,8 @@ HEADERS  += mainwindow.h \
     FileChooserWindow.h \
     executewindow.h \
     viewTestResults.h \
-    ShowTest.h
+    ShowTest.h \
+    ConfusionMatrix.h
 
 FORMS    += mainwindow.ui \
     form.ui \

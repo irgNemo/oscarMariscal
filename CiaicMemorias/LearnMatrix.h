@@ -9,6 +9,11 @@
 class LearnMatrix : public BinaryAssociativeMemories
 {
 
+    /*
+     * This method is used to help in parallel processing in the learning phase
+     */
+    static void auxLearningConcurrent(int * x, int * y,int* learnMatrixRow, int rowSize);
+
 public:
     /** \brief This method set the matrix "M" to 0.
      *

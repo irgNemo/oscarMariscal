@@ -1,7 +1,7 @@
 #include "LearnMatrix.h"
-
+#include <QFuture>
+#include <QtConcurrentRun>
 #include <QDebug>
-
 
 LearnMatrix::LearnMatrix(DataFormat d):BinaryAssociativeMemories(d) {
     for (int i =0 ; i < data.getNumFil(); i++) {
@@ -11,17 +11,31 @@ LearnMatrix::LearnMatrix(DataFormat d):BinaryAssociativeMemories(d) {
     }
 }
 
-void LearnMatrix::learningMethod() {
-    for (int i = 0 ; i< cantMatrixRows; i++) {
-        for (int j = 0 ; j < cantColMatriz; j++) {
-            if (outputVector[i][i] == 1 && data.getFundamentalSet()[i][j] == 1) {
-                matrix[i][j]=EPSILON;
-            } else if (outputVector[i][i] == 1 && data.getFundamentalSet()[i][j] == 0) {
-                matrix[i][j]=-EPSILON;
-            } else {
-                matrix[i][j]=0;
-            }
+void LearnMatrix::auxLearningConcurrent(int *x, int *y, int* learnMatrixRow,  int rowSize)
+{
+    for ( int i  =0 ; i< rowSize; i++){
+        if (x[i] == 1 && y[i] == 1){
+            learnMatrixRow[i] = EPSILON;
         }
+        else if (x[i] == 1 && y[0] == 0){
+            learnMatrixRow[i] = -EPSILON;
+        }
+        else {
+            learnMatrixRow[i] = 0;
+        }
+    }
+}
+
+void LearnMatrix::learningMethod() {
+    QVector<QFuture<void>> threadVector;
+    for (int i =  0 ; i < cantMatrixRows ; i++){
+      QFuture<void> hilo = QtConcurrent::run(auxLearningConcurrent, outputVector[i],data.getFundamentalSet()[i],matrix[i],cantColMatriz);
+      threadVector.append(hilo);
+    }
+
+    for (int i = 0 ; i< threadVector.size() ; i++){
+        QFuture <void > hilo = threadVector.at(i);
+        hilo.waitForFinished();
     }
 }
 
